@@ -185,7 +185,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      498 字
+      570 字
     </span>
   
 
@@ -195,7 +195,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      6
+      7
        分钟
     </span>
   
@@ -252,7 +252,12 @@
 <h2 id="4-贝叶斯前期准备"><a href="#4-贝叶斯前期准备" class="headerlink" title="4 贝叶斯前期准备"></a>4 贝叶斯前期准备</h2><p> 　　假设我们的输入空间为$X$，输入空间$X$中的每一条样本（特征向量）记为$x$，$x$有$n$个属性$x^{(1)}, x^{(2)}, x^{(3)}, … , x^{n-1}, x^n$。故记样本$x = {x^{(1)}, x^{(2)}, x^{(3)}, … , x^{n-1}, x^n}$。输出空间为$Y$，$Y$有$k$个类别标签，即$Y= {c_1, c_2, c_3, …, c_k}$。</p>
 <p>　　将样本$x$分类为$c_i$所产生的期望损失，也称样本$x$上的“条件风险”为<br>$$R(c_i|x) = \sum_{j=1}^k\lambda_{ij}P(c_j|x)。 \tag{2}$$</p>
 <p>其中，$\lambda_{ij}$表示将标签为$c_j$的样本错误标记为$c_i$所产生的损失，$P(c_j|x)$表示样本$x$的标签为$c_j$的概率，也被称为后验概率。</p>
+<p>我们的目的是找到一个假设$h(hypothesis)$，使得最小化总体损失</p>
+<p>$$R(h) = \Bbb E [R(h(x)|x)] \tag{3}。$$</p>
 <p>为了最小化总体损失，只需在每个样本上选择能使条件风险$R(c|x)$最小的类别标签即可，即</p>
+<p>$$h^\ast (x) = arg, \min_{c \in Y}R(c|x) \tag{4}。$$</p>
+<p>在（2）式中，$\lambda_{ij}$可以记为</p>
+<p>$$<br>\lambda_{ij} =<br>\begin{cases}<br>0, &amp; if\ {i = j};  \<br>1, &amp; otherwise<br>\end{cases}<br>\tag{5}<br>$$</p>
 <h2 id="5-朴素贝叶斯分类器"><a href="#5-朴素贝叶斯分类器" class="headerlink" title="5 朴素贝叶斯分类器"></a>5 朴素贝叶斯分类器</h2><h2 id="6-拉普拉斯校准"><a href="#6-拉普拉斯校准" class="headerlink" title="6 拉普拉斯校准"></a>6 拉普拉斯校准</h2><h2 id="7-简化计算"><a href="#7-简化计算" class="headerlink" title="7 简化计算"></a>7 简化计算</h2>
             </div>
             <hr>
@@ -282,6 +287,12 @@
                   <article class="post-prev col-6">
                     
                     
+                      <a href="/2021/04/19/%E6%A6%82%E7%8E%87%E8%AE%BA/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">概率论</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
                   </article>
                   <article class="post-next col-6">
                     
@@ -297,6 +308,15 @@
               
             </div>
 
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+
+              </article>
             
           </article>
         </div>
