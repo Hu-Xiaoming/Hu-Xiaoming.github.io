@@ -18,7 +18,7 @@
   <meta name="author" content="胡小明">
   <meta name="keywords" content="">
   
-  <title>状态机 - 恒心居</title>
+  <title>第3章 渐近记法 - 恒心居</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -163,7 +163,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="状态机">
+            <span class="h2" id="subtitle" title="第3章 渐近记法">
               
             </span>
 
@@ -173,8 +173,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-04-23 21:33" pubdate>
-        2021年4月23日 晚上
+      <time datetime="2021-05-01 00:31" pubdate>
+        2021年5月1日 凌晨
       </time>
     </span>
   
@@ -185,7 +185,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      0 字
+      610 字
     </span>
   
 
@@ -195,7 +195,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1
+      9
        分钟
     </span>
   
@@ -233,15 +233,80 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">状态机</h1>
+            <h1 style="display: none">第3章 渐近记法</h1>
             
             <div class="markdown-body">
-              
+              <h1 id="第3章-渐近记法"><a href="#第3章-渐近记法" class="headerlink" title="第3章 渐近记法"></a>第3章 渐近记法</h1><h2 id="1-渐近符"><a href="#1-渐近符" class="headerlink" title="1 渐近符"></a>1 渐近符</h2><p>　　在渐近符中“=”不代表相等，等号左右不能交换，即$A=B$，$B\ne A$。</p>
+<h3 id="1-1-大O记法"><a href="#1-1-大O记法" class="headerlink" title="1.1 大O记法"></a>1.1 大O记法</h3><ol>
+<li><p>定义：函数$f(n)$满足式</p>
+<p>$$f( n ) = O( g( n ) ), \tag{1}$$</p>
+<p>即$\exists$ $c&gt;0,n_0&gt;0$，$\forall$ $n \ge n_0$，使得$0 \le f(n) \le c \cdot g(n)$。</p>
+</li>
+<li><p>举例：$2n^2=O(n^3)$，也有的文献中会表示为$2n^2 \in O(n^3)$，这两种表示方式是等价的，之所以可以这样表示，是因为（1）式的实质就是$f(n)$属于$g(n)$的函数集$O(g(n))$，即$O(g(n))={ f(n): there \ are \ consts \ c &gt; 0, n_0&gt;0 \ such \ that \ 0 \le f(n) \le c \cdot g(n) }$。这也进一步解释了“=”的意义。</p>
+</li>
+<li><p>用处：</p>
+<ul>
+<li>$f(n)=n^3 + O(n^2)$ 表示 $\exists h(n) \in O(n^2)$ 使得 $f(n) = n^3 + h(n)$。函数$f(n)$主要是$n^3$，但还是有一些低阶项。</li>
+<li>$n^2+O(n)=O(n^2)$ 表示 $\forall f(n) \in O(n), \ \exists \ h(n) \in O(n^2) \ $使得 $n^2 + f(n)=h(n)$。这个例子更能体现“=”的意义。</li>
+</ul>
+</li>
+</ol>
+<h3 id="1-2-Omega-记法"><a href="#1-2-Omega-记法" class="headerlink" title="1.2 $\Omega$记法"></a>1.2 $\Omega$记法</h3><p>　　程序通常考虑的是运行时间的上界（$O$），有时也需要下界（$\Omega$）。</p>
+<ol>
+<li><p>定义：函数$f(n)$满足式</p>
+<p>$$f(n)=\Omega(g(n)), \tag{2}$$</p>
+<p>即$\exists$ $c&gt;0,n_0&gt;0$，$\forall$ $n \ge n_0$，使得$0 \le c \cdot g(n) \le f(n)$。</p>
+</li>
+<li><p>举例：$\sqrt{n} = \Omega(lgn)$，同1.1节也可表示为$\sqrt{n} \in \Omega(lgn)$，也就是$f(n)$属于$g(n)$的函数集$\Omega(g(n))$，即$\Omega(g(n))={f(n): there \ are \ consts \ c &gt; 0, n_0&gt;0 \ such \ that \ 0 \le c \cdot g(n) \le f(n) }$</p>
+</li>
+</ol>
+<h3 id="1-3-Theta-记法"><a href="#1-3-Theta-记法" class="headerlink" title="1.3 $\Theta$记法"></a>1.3 $\Theta$记法</h3><ol>
+<li>定义：$\Theta(g(n)) = O(g(n)) \cap \Omega(g(n)) \tag{3}$</li>
+</ol>
+<h3 id="1-4-小o记法"><a href="#1-4-小o记法" class="headerlink" title="1.4 小o记法"></a>1.4 小o记法</h3><ol>
+<li><p>定义：函数$f(n)$满足式</p>
+<p>$$f( n ) = o( g( n ) ), \tag{4}$$</p>
+<p>即 $\forall c&gt;0，\exists n_0&gt;0$，$\forall$ $n \ge n_0$，使得$0 \le f(n) \le c \cdot g(n)$。</p>
+</li>
+<li><p>举例：$2n^2=o(n^3)$</p>
+</li>
+</ol>
+<h3 id="1-5-小-omega-记法"><a href="#1-5-小-omega-记法" class="headerlink" title="1.5 小$\omega$记法"></a>1.5 小$\omega$记法</h3><ol>
+<li><p>定义：函数$f(n)$满足式</p>
+<p>$$f(n)=\omega(g(n)), \tag{5}$$</p>
+<p>即$\forall c&gt;0，\exists n_0&gt;0$，$\forall$ $n \ge n_0$，使得$0 \le c \cdot g(n) \le f(n)$。</p>
+</li>
+</ol>
+<h3 id="1-6-小结"><a href="#1-6-小结" class="headerlink" title="1.6 小结"></a>1.6 小结</h3><p>　　<em>小$o$与大$O$、小$\omega$与$\Omega$的区别为前者是对于全部$c&gt;0$都成立，无论$c$多么小。</em></p>
+<blockquote>
+<p>上述符号与常用的等式符号的对应关系如下：<br>$O$：$\le$<br>$\Omega$：$\ge$<br>$\Theta$：$=$<br>$o$：$&lt;$<br>$\omega$：$&gt;$</p>
+</blockquote>
+<h2 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h2><ol>
+<li><p>《数据结构、算法与应用 C++描述》第2版</p>
+</li>
+<li><p>麻省理工学院公开课：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Ex411T773?p=2">算法导论</a></p>
+</li>
+</ol>
+
             </div>
             <hr>
             <div>
               <div class="post-metas mb-3">
                 
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E3%80%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E3%80%81%E7%AE%97%E6%B3%95%E4%B8%8E%E5%BA%94%E7%94%A8-C-%E6%8F%8F%E8%BF%B0%E3%80%8B/">《数据结构、算法与应用 C++描述》</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+                    
+                  </div>
                 
               </div>
               
@@ -256,18 +321,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/05/01/%E6%B8%90%E8%BF%91%E8%AE%B0%E6%B3%95/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">第3章 渐近记法</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/04/19/%E6%A6%82%E7%8E%87%E8%AE%BA/">
-                        <span class="hidden-mobile">概率论</span>
+                      <a href="/2021/04/23/%E7%8A%B6%E6%80%81%E6%9C%BA/">
+                        <span class="hidden-mobile">状态机</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

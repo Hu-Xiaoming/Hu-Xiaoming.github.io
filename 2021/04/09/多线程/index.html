@@ -195,7 +195,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      19
+      20
        分钟
     </span>
   
@@ -236,7 +236,7 @@
             <h1 style="display: none">多线程</h1>
             
             <div class="markdown-body">
-              <h1 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h1><h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>　　以前在编写Python项目时，使用过threading包等多线程知识，但每次都是现查现用。在近期有关Webots的某个工程中，因Webots中Robot（Nao）控制问题（似乎与多线程有关，虽然作者不知道如何解释，但是将每个动作创建为线程就能很好的解决该问题），导致Nao无法执行本人的一串动作指令，如“走-&gt;左转-&gt;走”，机器人具体表现不详，但肯定不是我们正常期盼的那样，先“走”，然后“左转”，然后再“走”。<br>　　本文将以上述工程的demo为例，讲述一下多线程的使用。</p>
+              <h1 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h1><h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>　　以前在编写Python项目时，使用过threading包等多线程知识，但每次都是现查现用。在近期有关Webots的某个工程中，因Webots中Robot（Nao）控制问题（似乎与多线程有关，虽然作者不知道如何解释，但是将每个动作创建为线程就能很好的解决该问题），导致Nao无法执行本人的一串动作指令，如“走-&gt;左转-&gt;走”，机器人只能执行最后一个动作”走“，不是我们期盼的那样，先“走”，然后“左转”，然后再“走”；如果是动作指令”走-&gt;挥手“，机器人会边走边挥手（可能由于重心问题会倒），这似乎也确实证明了Webots中的动作是并行的。<br>　　本文将以上述工程的demo为例，讲述一下多线程的使用。</p>
 <h2 id="1-概念先行"><a href="#1-概念先行" class="headerlink" title="1 概念先行"></a>1 概念先行</h2><h3 id="1-1-程序"><a href="#1-1-程序" class="headerlink" title="1.1 程序"></a>1.1 程序</h3><p>　　程序是一个指令序列，包括程序段（存储程序运行过程中的代码）和数据段（存储程序运行过程处理的数据）</p>
 <h3 id="1-2-进程实体（进程映像）"><a href="#1-2-进程实体（进程映像）" class="headerlink" title="1.2 进程实体（进程映像）"></a>1.2 进程实体（进程映像）</h3><p>　　进程实体包括程序进程控制块（Process Control Block, PCB）、程序段、进程段。</p>
 <h4 id="1-2-1-PCB"><a href="#1-2-1-PCB" class="headerlink" title="1.2.1 PCB"></a>1.2.1 PCB</h4><p>　　系统为运行的程序配置一个数据结构，叫做进程控制块。它用来存储进程的各种信息（如程序代码的存放位置）。<br>　　创建进程实质上式创建进程实体中的PCB；撤销进程实质上是撤销PCB。<strong>PCB是进程的存在的唯一标志！</strong></p>
