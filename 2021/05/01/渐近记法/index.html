@@ -185,7 +185,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      610 字
+      614 字
     </span>
   
 
@@ -242,7 +242,7 @@
 <p>$$f( n ) = O( g( n ) ), \tag{1}$$</p>
 <p>即$\exists$ $c&gt;0,n_0&gt;0$，$\forall$ $n \ge n_0$，使得$0 \le f(n) \le c \cdot g(n)$。</p>
 </li>
-<li><p>举例：$2n^2=O(n^3)$，也有的文献中会表示为$2n^2 \in O(n^3)$，这两种表示方式是等价的，之所以可以这样表示，是因为（1）式的实质就是$f(n)$属于$g(n)$的函数集$O(g(n))$，即$O(g(n))={ f(n): there \ are \ consts \ c &gt; 0, n_0&gt;0 \ such \ that \ 0 \le f(n) \le c \cdot g(n) }$。这也进一步解释了“=”的意义。</p>
+<li><p>举例：$2n^2=O(n^3)$，也有的文献中会表示为$2n^2 \in O(n^3)$，这两种表示方式是等价的，之所以可以这样表示，是因为（1）式的实质就是$f(n)$属于$g(n)$的函数集$O(g(n))$，即$O(g(n))=\lbrace f(n): there \ are \ consts \ c &gt; 0, n_0&gt;0 \ such \ that \ 0 \le f(n) \le c \cdot g(n) \rbrace$。这也进一步解释了“=”的意义。</p>
 </li>
 <li><p>用处：</p>
 <ul>
@@ -257,7 +257,7 @@
 <p>$$f(n)=\Omega(g(n)), \tag{2}$$</p>
 <p>即$\exists$ $c&gt;0,n_0&gt;0$，$\forall$ $n \ge n_0$，使得$0 \le c \cdot g(n) \le f(n)$。</p>
 </li>
-<li><p>举例：$\sqrt{n} = \Omega(lgn)$，同1.1节也可表示为$\sqrt{n} \in \Omega(lgn)$，也就是$f(n)$属于$g(n)$的函数集$\Omega(g(n))$，即$\Omega(g(n))={f(n): there \ are \ consts \ c &gt; 0, n_0&gt;0 \ such \ that \ 0 \le c \cdot g(n) \le f(n) }$</p>
+<li><p>举例：$\sqrt{n} = \Omega(lgn)$，同1.1节也可表示为$\sqrt{n} \in \Omega(lgn)$，也就是$f(n)$属于$g(n)$的函数集$\Omega(g(n))$，即$\Omega(g(n))=\lbrace f(n): there \ are \ consts \ c &gt; 0, n_0&gt;0 \ such \ that \ 0 \le c \cdot g(n) \le f(n) \rbrace$</p>
 </li>
 </ol>
 <h3 id="1-3-Theta-记法"><a href="#1-3-Theta-记法" class="headerlink" title="1.3 $\Theta$记法"></a>1.3 $\Theta$记法</h3><ol>
