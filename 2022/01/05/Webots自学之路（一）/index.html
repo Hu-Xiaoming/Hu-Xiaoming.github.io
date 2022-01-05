@@ -18,7 +18,7 @@
   <meta name="author" content="胡小明">
   <meta name="keywords" content="">
   
-  <title>计算机学习资料 - 恒心居</title>
+  <title>Webots自学之路（一） - 恒心居</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -163,7 +163,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="计算机学习资料">
+            <span class="h2" id="subtitle" title="Webots自学之路（一）">
               
             </span>
 
@@ -173,8 +173,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-04-04 21:56" pubdate>
-        2021年4月4日 晚上
+      <time datetime="2022-01-05 23:31" pubdate>
+        2022年1月5日 晚上
       </time>
     </span>
   
@@ -185,7 +185,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      387 字
+      617 字
     </span>
   
 
@@ -195,7 +195,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      5
+      7
        分钟
     </span>
   
@@ -233,91 +233,53 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">计算机学习资料</h1>
+            <h1 style="display: none">Webots自学之路（一）</h1>
             
             <div class="markdown-body">
-              <h1 id="1-语言篇"><a href="#1-语言篇" class="headerlink" title="1 语言篇"></a>1 语言篇</h1><h2 id="1-1-c"><a href="#1-1-c" class="headerlink" title="1.1 c++"></a>1.1 c++</h2><ul>
-<li><a target="_blank" rel="noopener" href="http://www.cplusplus.com/">http://www.cplusplus.com/</a></li>
-<li>MFC：<a target="_blank" rel="noopener" href="http://www.jizhuomi.com/software/257.html">http://www.jizhuomi.com/software/257.html</a></li>
-</ul>
-<h2 id="1-2-python"><a href="#1-2-python" class="headerlink" title="1.2 python"></a>1.2 python</h2><ul>
-<li>python官方文档：<a target="_blank" rel="noopener" href="https://docs.python.org/zh-cn/3.7/tutorial/index.html">https://docs.python.org/zh-cn/3.7/tutorial/index.html</a></li>
-<li>Dive into python（深入python）：<a target="_blank" rel="noopener" href="https://diveintopython3.net/">https://diveintopython3.net/</a></li>
-<li><a target="_blank" rel="noopener" href="http://www.python3.vip/">http://www.python3.vip/</a></li>
-</ul>
-<h1 id="2-算法"><a href="#2-算法" class="headerlink" title="2 算法"></a>2 算法</h1><ul>
-<li>数据结构、算法与应用(c++)<a target="_blank" rel="noopener" href="https://www.cise.ufl.edu/~sahni/dsaac/">https://www.cise.ufl.edu/~sahni/dsaac/</a></li>
-</ul>
-<h1 id="3-机器学习"><a href="#3-机器学习" class="headerlink" title="3 机器学习"></a>3 机器学习</h1><h2 id="3-1-机器学习"><a href="#3-1-机器学习" class="headerlink" title="3.1 机器学习"></a>3.1 机器学习</h2><ul>
-<li><p>南瓜书：</p>
-<p><a target="_blank" rel="noopener" href="https://datawhalechina.github.io/pumpkin-book/#/">https://datawhalechina.github.io/pumpkin-book/#/</a></p>
+              <h1 id="webots自学之路（一）"><a href="#webots自学之路（一）" class="headerlink" title="webots自学之路（一）"></a>webots自学之路（一）</h1><h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>　　基于webots的用户指导（User Guide），记录webots仿真软件的学习。</p>
+<p><img src="/2022/01/05/Webots%E8%87%AA%E5%AD%A6%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/sence.png" srcset="/img/loading.gif" lazyload alt="sence"></p>
+<h2 id="1-My-First-Simulation-in-Webots"><a href="#1-My-First-Simulation-in-Webots" class="headerlink" title="1 My First Simulation in Webots"></a>1 My First Simulation in Webots</h2><blockquote>
+<p>本节主要讲述了：</p>
 <ul>
-<li>南瓜书是对西瓜书（周志华《机器学习》）中公式的详尽推导</li>
+<li>如何创建一个新项目？</li>
+<li>如何添加新结点（包括<strong>RectangleArean</strong>、<strong>e-puck Robot</strong> 和 **WoodenBox(Solid)**）？</li>
+<li>如何调整Arean的地砖尺寸和墙高？</li>
+<li>如何调整箱子的大小、位置？</li>
+<li>如何创建控制器（<strong>Controller</strong>）？</li>
 </ul>
-</li>
-<li><p>scikit-learn: <a target="_blank" rel="noopener" href="https://scikit-learn.org/stable/">https://scikit-learn.org/stable/</a></p>
-</li>
-</ul>
-<h2 id="3-2-强化学习"><a href="#3-2-强化学习" class="headerlink" title="3.2 强化学习"></a>3.2 强化学习</h2><ul>
-<li><p>david silver：<a target="_blank" rel="noopener" href="https://www.davidsilver.uk/teaching/">https://www.davidsilver.uk/teaching/</a></p>
-</li>
-<li><p>莫烦python：</p>
-<p><a target="_blank" rel="noopener" href="https://morvanzhou.github.io/">https://morvanzhou.github.io/</a></p>
-<ul>
-<li>也包含python、深度学习、实例、多进程等等。</li>
-</ul>
-</li>
-</ul>
-<h2 id="3-3-深度学习"><a href="#3-3-深度学习" class="headerlink" title="3.3 深度学习"></a>3.3 深度学习</h2><ul>
-<li>动手学深度学习：<ul>
-<li>文档：<a target="_blank" rel="noopener" href="http://zh.gluon.ai/">http://zh.gluon.ai/</a></li>
-<li>视频：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV154411S7Tf?from=search&amp;seid=9397274944264794167">https://www.bilibili.com/video/BV154411S7Tf?from=search&amp;seid=9397274944264794167</a></li>
-</ul>
-</li>
-</ul>
-<h2 id="3-4-自然语言处理"><a href="#3-4-自然语言处理" class="headerlink" title="3.4 自然语言处理"></a>3.4 自然语言处理</h2><ul>
-<li>HanLP：<ul>
-<li>PyHanLP工具包使用指南：<a target="_blank" rel="noopener" href="https://ningshixian.github.io/2019/11/13/PyHanLP%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/">https://ningshixian.github.io/2019/11/13/PyHanLP%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</a></li>
-</ul>
-</li>
-</ul>
-<h2 id="3-5-人工智能"><a href="#3-5-人工智能" class="headerlink" title="3.5 人工智能"></a>3.5 人工智能</h2><ul>
-<li>人工智能：<a target="_blank" rel="noopener" href="https://www.captainai.net/st/">https://www.captainai.net/st/</a></li>
-</ul>
-<h1 id="4-操作系统"><a href="#4-操作系统" class="headerlink" title="4 操作系统"></a>4 操作系统</h1><h2 id="4-1-Linux"><a href="#4-1-Linux" class="headerlink" title="4.1 Linux"></a>4.1 Linux</h2><ul>
-<li>鸟哥的Linux私房菜：<a target="_blank" rel="noopener" href="http://linux.vbird.org/">http://linux.vbird.org/</a></li>
-<li>Makefile<ul>
-<li><a target="_blank" rel="noopener" href="https://seisman.github.io/how-to-write-makefile/invoke.html">https://seisman.github.io/how-to-write-makefile/invoke.html</a></li>
-</ul>
-</li>
-</ul>
-<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><h2 id="数学"><a href="#数学" class="headerlink" title="数学"></a>数学</h2><ul>
-<li><a target="_blank" rel="noopener" href="http://www.songho.ca/math/index.html">http://www.songho.ca/math/index.html</a></li>
-<li>wolfram mathworld（用于查询）：<a target="_blank" rel="noopener" href="https://mathworld.wolfram.com/topics/">https://mathworld.wolfram.com/topics/</a></li>
-</ul>
-<h2 id="微软官方文档-包含c-，sql等等"><a href="#微软官方文档-包含c-，sql等等" class="headerlink" title="微软官方文档(包含c++，sql等等)"></a>微软官方文档(包含c++，sql等等)</h2><ul>
-<li>MSDN：<a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/">https://docs.microsoft.com/zh-cn/</a></li>
-</ul>
-<h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><ul>
-<li>代码高亮（菜鸟）：<a target="_blank" rel="noopener" href="https://c.runoob.com/front-end/5536">https://c.runoob.com/front-end/5536</a></li>
-<li>PDF转化：<a target="_blank" rel="noopener" href="https://xpdf.net/pdf-to-word">https://xpdf.net/pdf-to-word</a></li>
-<li>在线域名解析器：<a target="_blank" rel="noopener" href="http://www.ip33.com/dns.html">http://www.ip33.com/dns.html</a></li>
-<li>流程图：<a target="_blank" rel="noopener" href="https://online.visual-paradigm.com/cn/diagrams/features/flowchart-tool/">https://online.visual-paradigm.com/cn/diagrams/features/flowchart-tool/</a></li>
-<li>github：<a target="_blank" rel="noopener" href="https://docs.github.com/cn">https://docs.github.com/cn</a></li>
-<li>桌面管理（酷呆桌面）：<a target="_blank" rel="noopener" href="https://www.coodesker.com/">酷呆桌面 - 桌面整理工具 (coodesker.com)</a></li>
-</ul>
+</blockquote>
+<h3 id="1-1-创建新项目"><a href="#1-1-创建新项目" class="headerlink" title="1.1 创建新项目"></a>1.1 创建新项目</h3><p>　　在菜单栏中，选择Wizards $\to$ New Project Directory，如下图所示。 </p>
+<p><img src="/2022/01/05/Webots%E8%87%AA%E5%AD%A6%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/create_new_project.png" srcset="/img/loading.gif" lazyload alt="create_new_project"></p>
+<h3 id="1-2-对物体施加一个力（Apply-a-Force）"><a href="#1-2-对物体施加一个力（Apply-a-Force）" class="headerlink" title="1.2 对物体施加一个力（Apply a Force）"></a>1.2 对物体施加一个力（Apply a Force）</h3><p>　　在模拟过程中，使用<strong>Alt键 + 鼠标左键 + 鼠标拖拽</strong>可以对物体（<strong>e-puck Robot</strong>）施加一个力，这会导致机器人被拖走；如果对箱子（<strong>WoodenBox(Solid)<strong>）进行该操作，箱子没有什么反应，原因是箱子默认是不考虑质量（</strong>mass</strong>）的。如果给箱子一个质量，箱子就可以进行拖拽了，假如给箱子的质量足够小，机器人也可以推动箱子。</p>
+<h3 id="1-3-创建控制器（Controller）"><a href="#1-3-创建控制器（Controller）" class="headerlink" title="1.3 创建控制器（Controller）"></a>1.3 创建控制器（Controller）</h3><p>　　在菜单栏中，选择Wizards $\to$ New Robot Controller，如下图所示。 </p>
+<p><img src="/2022/01/05/Webots%E8%87%AA%E5%AD%A6%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/create_new_controller.png" srcset="/img/loading.gif" lazyload alt="create_new_controller"></p>
+<p>　　创建完成后，要将新建的控制器与机器人连接起来。”<strong>epuck_go_forward</strong>“ 就是我们创建的控制器。下图展示了控制器连接完成的结果。</p>
+<div align="center">
 
+
+<p><img src="/2022/01/05/Webots%E8%87%AA%E5%AD%A6%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/associate_controller.png" srcset="/img/loading.gif" lazyload alt="associate_controller"></p>
+</div>
+
+<h2 id="2-Modification-of-the-Environment"><a href="#2-Modification-of-the-Environment" class="headerlink" title="2 Modification of the Environment"></a>2 Modification of the Environment</h2><blockquote>
+<p>本节主要讲述了：</p>
+<ul>
+<li>如何删除结点（<strong>RectangleArean</strong>）？</li>
+<li>介绍了实体结点（<strong>The Solid Node</strong>），或称作刚体（<strong>Rigid Body</strong>）。</li>
+<li>如何创建一个球</li>
+<li>如何显示球与地面的接触线（<strong>The contact points</strong>）</li>
+<li>如何通过调整球的几何结构（<strong>Geometries</strong>），让球更圆。</li>
+<li>介绍了DEF-USE机制（<strong>DEF-USE Mechanism</strong>）</li>
+</ul>
+</blockquote>
+<h3 id="2-1-实体结点（The-Solid-Node）"><a href="#2-1-实体结点（The-Solid-Node）" class="headerlink" title="2.1 实体结点（The Solid Node）"></a>2.1 实体结点（The Solid Node）</h3><h3 id="2-2-创建一个球"><a href="#2-2-创建一个球" class="headerlink" title="2.2 创建一个球"></a>2.2 创建一个球</h3><p>　　接下来，我们要建模一个刚体球。</p>
+<blockquote>
+<p>&lt;动手 #1&gt;：<sup>[注]：翻译自Webots / User Guide / Tutorial / Tutorials 2 / Create a Ball / Hands-on #4。</sup><br>　　在场景树中，选择最后一个结点，点击<strong>Add</strong>按钮。在新出现的对话框中，选择<strong>Solid</strong>（<strong>Base nodes $\to$ Solid</strong>），点击<strong>Add</strong>创建一个Solid结点。在场景树中，展开新创建的Solid结点，选择<strong>children</strong>字段，点击<strong>Add</strong>按钮。在新出现的对话框中，选择<strong>Shape</strong>（<strong>Base nodes $\to$ Shape</strong>），点击<strong>Add</strong>创建一个Shape结点。展开Shape结点，选择<strong>appearance</strong>字段，添加一个<strong>PBRAppearance</strong>（<strong>Base nodes$\to$ PBRAppearance</strong>）结点。</p>
+</blockquote>
+<h4 id="2-2-1-显示球与地面的接触线"><a href="#2-2-1-显示球与地面的接触线" class="headerlink" title="2.2.1 显示球与地面的接触线"></a>2.2.1 显示球与地面的接触线</h4><h4 id="2-2-2-让球变得更圆"><a href="#2-2-2-让球变得更圆" class="headerlink" title="2.2.2 让球变得更圆"></a>2.2.2 让球变得更圆</h4><h3 id="2-3-DEF-USE机制"><a href="#2-3-DEF-USE机制" class="headerlink" title="2.3 DEF-USE机制"></a>2.3 DEF-USE机制</h3><h2 id="3-Appearance"><a href="#3-Appearance" class="headerlink" title="3 Appearance"></a>3 Appearance</h2><h2 id="4-More-about-of-Controllers"><a href="#4-More-about-of-Controllers" class="headerlink" title="4 More about of Controllers"></a>4 More about of Controllers</h2><h2 id="5-Conpound-Solid-and-Physics-Attributes"><a href="#5-Conpound-Solid-and-Physics-Attributes" class="headerlink" title="5 Conpound Solid and Physics Attributes"></a>5 Conpound Solid and Physics Attributes</h2><h2 id="6-4-Wheels-Robot"><a href="#6-4-Wheels-Robot" class="headerlink" title="6 4-Wheels Robot"></a>6 4-Wheels Robot</h2><h2 id="7-My-First-PROTO"><a href="#7-My-First-PROTO" class="headerlink" title="7 My First PROTO"></a>7 My First PROTO</h2><h2 id="8-Using-ROS"><a href="#8-Using-ROS" class="headerlink" title="8 Using ROS"></a>8 Using ROS</h2>
             </div>
             <hr>
             <div>
               <div class="post-metas mb-3">
-                
-                  <div class="post-meta mr-3">
-                    <i class="iconfont icon-category"></i>
-                    
-                      <a class="hover-with-bg" href="/categories/%E8%B5%84%E6%96%99/">资料</a>
-                    
-                  </div>
                 
                 
               </div>
@@ -333,18 +295,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/04/04/%E7%BB%98%E7%94%BB%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">绘画学习资料</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/04/04/%E6%9C%89%E9%99%90%E7%8A%B6%E6%80%81%E8%87%AA%E5%8A%A8%E6%9C%BA/">
-                        <span class="hidden-mobile">有限状态自动机</span>
+                      <a href="/2021/05/01/%E6%B8%90%E8%BF%91%E8%AE%B0%E6%B3%95/">
+                        <span class="hidden-mobile">第3章 渐近记法</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
