@@ -185,7 +185,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.1k 字
+      1.5k 字
     </span>
   
 
@@ -195,7 +195,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      13
+      17
        分钟
     </span>
   
@@ -237,7 +237,7 @@
             
             <div class="markdown-body">
               <h1 id="webots自学之路（一）"><a href="#webots自学之路（一）" class="headerlink" title="webots自学之路（一）"></a>webots自学之路（一）</h1><h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>　　基于webots的用户指导（User Guide），记录webots仿真软件的学习。</p>
-<p><img src="/2022/01/05/Webots%E8%87%AA%E5%AD%A6%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/sence.png" srcset="/img/loading.gif" lazyload alt="sence"></p>
+<p><img src="/2022/01/05/Webots%E8%87%AA%E5%AD%A6%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/sence.png" srcset="/img/loading.gif" lazyload alt="图1 Webots界面简介图"></p>
 <h2 id="1-My-First-Simulation-in-Webots"><a href="#1-My-First-Simulation-in-Webots" class="headerlink" title="1 My First Simulation in Webots"></a>1 My First Simulation in Webots</h2><blockquote>
 <p>本节主要讲述了：</p>
 <ul>
@@ -249,15 +249,15 @@
 </ul>
 </blockquote>
 <h3 id="1-1-创建新项目"><a href="#1-1-创建新项目" class="headerlink" title="1.1 创建新项目"></a>1.1 创建新项目</h3><p>　　在菜单栏中，选择Wizards $\to$ New Project Directory，如下图所示。 </p>
-<p><img src="/2022/01/05/Webots%E8%87%AA%E5%AD%A6%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/create_new_project.png" srcset="/img/loading.gif" lazyload alt="create_new_project"></p>
+<p><img src="/2022/01/05/Webots%E8%87%AA%E5%AD%A6%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/create_new_project.png" srcset="/img/loading.gif" lazyload alt="图2 创建新项目示意图"></p>
 <h3 id="1-2-对物体施加一个力（Apply-a-Force）"><a href="#1-2-对物体施加一个力（Apply-a-Force）" class="headerlink" title="1.2 对物体施加一个力（Apply a Force）"></a>1.2 对物体施加一个力（Apply a Force）</h3><p>　　在模拟过程中，使用<strong>Alt键 + 鼠标左键 + 鼠标拖拽</strong>可以对物体（<strong>e-puck Robot</strong>）施加一个力，这会导致机器人被拖走；如果对箱子（<strong>WoodenBox(Solid)<strong>）进行该操作，箱子没有什么反应，原因是箱子默认是不考虑质量（</strong>mass</strong>）的。如果给箱子一个质量，箱子就可以进行拖拽了，假如给箱子的质量足够小，机器人也可以推动箱子。</p>
 <h3 id="1-3-创建控制器（Controller）"><a href="#1-3-创建控制器（Controller）" class="headerlink" title="1.3 创建控制器（Controller）"></a>1.3 创建控制器（Controller）</h3><p>　　在菜单栏中，选择Wizards $\to$ New Robot Controller，如下图所示。 </p>
-<p><img src="/2022/01/05/Webots%E8%87%AA%E5%AD%A6%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/create_new_controller.png" srcset="/img/loading.gif" lazyload alt="create_new_controller"></p>
+<p><img src="/2022/01/05/Webots%E8%87%AA%E5%AD%A6%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/create_new_controller.png" srcset="/img/loading.gif" lazyload alt="图3 创建控制器示意图"></p>
 <p>　　创建完成后，要将新建的控制器与机器人连接起来。”<strong>epuck_go_forward</strong>“ 就是我们创建的控制器。下图展示了控制器连接完成的结果。</p>
 <div align="center">
 
 
-<p><img src="/2022/01/05/Webots%E8%87%AA%E5%AD%A6%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/associate_controller.png" srcset="/img/loading.gif" lazyload alt="associate_controller"></p>
+<p><img src="/2022/01/05/Webots%E8%87%AA%E5%AD%A6%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/associate_controller.png" srcset="/img/loading.gif" lazyload alt="图4 控制器连接完成示意图"></p>
 </div>
 
 <h2 id="2-Modification-of-the-Environment"><a href="#2-Modification-of-the-Environment" class="headerlink" title="2 Modification of the Environment"></a>2 Modification of the Environment</h2><blockquote>
@@ -281,7 +281,7 @@
 </ul>
 </blockquote>
 <p>　　结果如下图所示：</p>
-<p><img src="/2022/01/05/Webots%E8%87%AA%E5%AD%A6%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/ball_1.png" srcset="/img/loading.gif" lazyload alt="ball_1"></p>
+<p><img src="/2022/01/05/Webots%E8%87%AA%E5%AD%A6%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/ball_1.png" srcset="/img/loading.gif" lazyload alt="图5 球创建完成示意图"></p>
 <h4 id="2-2-1-显示球与地面的接触线"><a href="#2-2-1-显示球与地面的接触线" class="headerlink" title="2.2.1 显示球与地面的接触线"></a>2.2.1 显示球与地面的接触线</h4><p>　　打开Show Contact Points（Menu / View / Optional Rendering / Show Contact Points）。</p>
 <h4 id="2-2-2-让球变得更圆"><a href="#2-2-2-让球变得更圆" class="headerlink" title="2.2.2 让球变得更圆"></a>2.2.2 让球变得更圆</h4><p>　　此时，有两个<strong>Sphere</strong>结点，一个用于几何表示（<strong>children</strong>字段），一个用于定义物理边界（<strong>boundingObject</strong>字段）。将这两个Sphere结点的<strong>radius</strong>字段设置为0.05、<strong>subdivision</strong>字段设置为2。</p>
 <p>【注】：</p>
@@ -293,7 +293,32 @@
 <p>&lt;动手 #2&gt;：<sup>【注】：翻译自Webots / User Guide / Tutorial / Tutorials 2 / DEF-USE Mechanism / Hands-on #6。</sup><br>　　选择第一个Sphere结点（children字段中的），在字段编辑器中的DEF框里，敲入BALL_GEOMETRY。选择boundingObject字段（包含第二个Sphere结点），点击右键选中<strong>Delete</strong>，清空它的信息。选择boundingObject字段， 添加BALL_GEOMETRY结点（USE / BALL_GEOMETRY）。</p>
 </blockquote>
 <p>　　这样，可以在修改第一个Sphere结点的信息后，第二个Sphere结点的信息也自动同步更新。</p>
-<p><img src="/2022/01/05/Webots%E8%87%AA%E5%AD%A6%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/DEF-USE%E6%9C%BA%E5%88%B6%E7%A4%BA%E6%84%8F%E5%9B%BE.png" srcset="/img/loading.gif" lazyload alt="DEF-USE机制示意图"></p>
+<p><img src="/2022/01/05/Webots%E8%87%AA%E5%AD%A6%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/DEF-USE%E6%9C%BA%E5%88%B6%E7%A4%BA%E6%84%8F%E5%9B%BE.png" srcset="/img/loading.gif" lazyload alt="图6 DEF-USE机制示意图"></p>
+<h3 id="2-4-建墙"><a href="#2-4-建墙" class="headerlink" title="2.4 建墙"></a>2.4 建墙</h3><blockquote>
+<p>要求：</p>
+<ul>
+<li>建立四堵墙将Arean围起来；</li>
+<li>尽可能使用DEF-USE机制；</li>
+<li>墙是静态的。</li>
+</ul>
+</blockquote>
+<p>　　接下来，我们开始建墙。</p>
+<blockquote>
+<p>&lt;动手 #3&gt;：</p>
+<ol>
+<li>选择场景树中最后一个结点，添加一个Solid结点。</li>
+<li>展开新添加的Solid结点，选择children字段，添加一个Shape结点。</li>
+<li>展开新添加的Shape结点，选择appearance字段，添加一个PBRAppearance结点；选择geometry字段，添加一个Box结点。</li>
+<li>展开PBRAppearance结点，将metalness字段设置为0，再将roughness字段设置为1；展开Box结点，选择size字段，将x设置为1。</li>
+<li>选择Shape结点（Solid / children / Shape），在字段编辑器中DEF栏键入WALL_GEOMETRY。</li>
+<li>移动墙到合适位置。</li>
+<li>选择刚建好的新墙，使用 Ctrl+C 和 Ctrl+V 拷贝第二堵墙。</li>
+<li>选择第二堵墙，展开Solid / children字段，删除Shape结点，选择childre字段，添加USE / WALL_GEOMETRY (Shape) 结点。【注】：此时调整第一堵墙的长宽高等几何学特征，第二堵墙也会随之变化。</li>
+<li>第三、四堵墙同理。</li>
+</ol>
+</blockquote>
+<p>　　此时，进行模拟，会发现机器穿墙而过，这是由于没有设置boundingObejct和physics字段，即此时墙还没有物理特性。设置完成后（与&lt;动手 #1&gt;类似，这里不再赘述。），机器人不再被允许穿墙而过。如果希望机器人可以撞开墙逃出去，可以在physics中将质量mass设置为一个较小值，此时，机器人可以撞开墙逃逸。</p>
+<p><img src="/2022/01/05/Webots%E8%87%AA%E5%AD%A6%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/%E5%A2%99%E5%BB%BA%E7%AB%8B%E5%AE%8C%E6%88%90%E7%A4%BA%E6%84%8F%E5%9B%BE.png" srcset="/img/loading.gif" lazyload alt="图7 墙建立完成示意图"></p>
 <h2 id="3-Appearance"><a href="#3-Appearance" class="headerlink" title="3 Appearance"></a>3 Appearance</h2><h2 id="4-More-about-of-Controllers"><a href="#4-More-about-of-Controllers" class="headerlink" title="4 More about of Controllers"></a>4 More about of Controllers</h2><h2 id="5-Conpound-Solid-and-Physics-Attributes"><a href="#5-Conpound-Solid-and-Physics-Attributes" class="headerlink" title="5 Conpound Solid and Physics Attributes"></a>5 Conpound Solid and Physics Attributes</h2><h2 id="6-4-Wheels-Robot"><a href="#6-4-Wheels-Robot" class="headerlink" title="6 4-Wheels Robot"></a>6 4-Wheels Robot</h2><h2 id="7-My-First-PROTO"><a href="#7-My-First-PROTO" class="headerlink" title="7 My First PROTO"></a>7 My First PROTO</h2><h2 id="8-Using-ROS"><a href="#8-Using-ROS" class="headerlink" title="8 Using ROS"></a>8 Using ROS</h2>
             </div>
             <hr>
