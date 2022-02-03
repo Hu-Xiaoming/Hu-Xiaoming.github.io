@@ -185,7 +185,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      2k 字
+      2.3k 字
     </span>
   
 
@@ -195,7 +195,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      23
+      27
        分钟
     </span>
   
@@ -351,7 +351,7 @@
 <blockquote>
 <p>&lt;动手 #5&gt;：<sup>【注】：翻译自Webots / User Guide / Tutorial / Tutorials 3 / Modify the Appearance of the Walls / Hands-on #2。</sup></p>
 <ol>
-<li>找到第一堵墙（DEF-USE机制的母本墙），展开PBRAppearance结点（Solid / children / Shape / PBRAppearance ）。</li>
+<li>找到第一堵墙（DEF-USE机制的母本墙），展开PBRAppearance结点（Solid / children / Shape / PBRAppearance ）。【注】：前提是已添加了PBRAppearance结点，添加方法在&lt;动手 #1&gt;中，这里不再赘述。</li>
 <li>选择baseColor字段，设置为蓝色。</li>
 <li>选择metalness字段，设置为0。</li>
 <li>选择roughness字段，设置为0.5。</li>
@@ -359,7 +359,30 @@
 </ol>
 </blockquote>
 <p><img src="/2022/01/05/Webots%E8%87%AA%E5%AD%A6%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/%E5%A2%99%E6%B6%82%E4%B8%BA%E8%93%9D%E8%89%B2%E7%BB%93%E6%9E%9C%E7%A4%BA%E6%84%8F%E5%9B%BE.png" srcset="/img/loading.gif" lazyload alt="图10 墙涂为蓝色结果示意图"></p>
-<h3 id="3-4-给球的表面添加纹理"><a href="#3-4-给球的表面添加纹理" class="headerlink" title="3.4 给球的表面添加纹理"></a>3.4 给球的表面添加纹理</h3><h2 id="4-More-about-of-Controllers"><a href="#4-More-about-of-Controllers" class="headerlink" title="4 More about of Controllers"></a>4 More about of Controllers</h2><h2 id="5-Conpound-Solid-and-Physics-Attributes"><a href="#5-Conpound-Solid-and-Physics-Attributes" class="headerlink" title="5 Conpound Solid and Physics Attributes"></a>5 Conpound Solid and Physics Attributes</h2><h2 id="6-4-Wheels-Robot"><a href="#6-4-Wheels-Robot" class="headerlink" title="6 4-Wheels Robot"></a>6 4-Wheels Robot</h2><h2 id="7-My-First-PROTO"><a href="#7-My-First-PROTO" class="headerlink" title="7 My First PROTO"></a>7 My First PROTO</h2><h2 id="8-Using-ROS"><a href="#8-Using-ROS" class="headerlink" title="8 Using ROS"></a>8 Using ROS</h2>
+<h3 id="3-4-给球的表面添加纹理"><a href="#3-4-给球的表面添加纹理" class="headerlink" title="3.4 给球的表面添加纹理"></a>3.4 给球的表面添加纹理</h3><blockquote>
+<p>&lt;动手 #6&gt;：<sup>【注】：翻译自Webots / User Guide / Tutorial / Tutorials 3 / Add a Texture to the Ball / Hands-on #3。</sup></p>
+<ol>
+<li>选择球（Solid结点），展开PBRAppearance结点（Solid / children / Shape / PBRAppearance ）。【注】：前提是已添加了PBRAppearance结点，添加方法在&lt;动手 #1&gt;中，这里不再赘述。</li>
+<li>选择baseColorMap字段，添加一个<strong>ImageTexture</strong>结点。</li>
+<li>展开ImageTexture结点，选择url字段，点击添加按钮。</li>
+<li>选择**””**，在字段编辑器中点击Select…按钮，选择一张图片作为球的纹理。示例中的图片路径为”WEBOTS_HOME/projects/default/worlds/textures/red_brick_wall.jpg”。　　</li>
+</ol>
+</blockquote>
+<p><img src="/2022/01/05/Webots%E8%87%AA%E5%AD%A6%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/Webots%E6%8F%90%E4%BE%9B%E7%9A%84%E7%BA%B9%E7%90%86%E5%9B%BE%E7%89%87.png" srcset="/img/loading.gif" lazyload alt="图11 Webots提供的纹理图片"></p>
+<p>　　Webots通过<strong>UV mapping</strong>（UV映射）函数将二维图像表示映射到三维模型上。纹理添加完成的结果如图所示。</p>
+<p><img src="/2022/01/05/Webots%E8%87%AA%E5%AD%A6%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/%E7%90%83%E6%B7%BB%E5%8A%A0%E7%BA%B9%E7%90%86%E5%AE%8C%E6%88%90%E7%A4%BA%E6%84%8F%E5%9B%BE.png" srcset="/img/loading.gif" lazyload alt="图12 球添加纹理完成示意图"></p>
+<h3 id="3-5-不同的渲染模式"><a href="#3-5-不同的渲染模式" class="headerlink" title="3.5 不同的渲染模式"></a>3.5 不同的渲染模式</h3><p>　　两种渲染模式：</p>
+<ul>
+<li>线框渲染：打开方式为点击Menu / View / Wireframe Rendering。渲染结过如图所示。</li>
+<li>普通渲染：打开方式为点击Menu / View / Plain Rendering。</li>
+</ul>
+<p><img src="/2022/01/05/Webots%E8%87%AA%E5%AD%A6%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/%E7%BA%BF%E6%A1%86%E6%B8%B2%E6%9F%93%E7%A4%BA%E6%84%8F%E5%9B%BE.png" srcset="/img/loading.gif" lazyload alt="图13 线框渲染示意图"></p>
+<p>　　常用的其他渲染选项：</p>
+<ul>
+<li>显示坐标系：打开方式为点击Menu / View / Optional Rendering / Show Coordinates System。</li>
+<li>显示距离传感器：打开方式为点击Menu / View / Optional Rendering / Show DistanceSensor Rays。</li>
+</ul>
+<h2 id="4-More-about-of-Controllers"><a href="#4-More-about-of-Controllers" class="headerlink" title="4 More about of Controllers"></a>4 More about of Controllers</h2><h2 id="5-Conpound-Solid-and-Physics-Attributes"><a href="#5-Conpound-Solid-and-Physics-Attributes" class="headerlink" title="5 Conpound Solid and Physics Attributes"></a>5 Conpound Solid and Physics Attributes</h2><h2 id="6-4-Wheels-Robot"><a href="#6-4-Wheels-Robot" class="headerlink" title="6 4-Wheels Robot"></a>6 4-Wheels Robot</h2><h2 id="7-My-First-PROTO"><a href="#7-My-First-PROTO" class="headerlink" title="7 My First PROTO"></a>7 My First PROTO</h2><h2 id="8-Using-ROS"><a href="#8-Using-ROS" class="headerlink" title="8 Using ROS"></a>8 Using ROS</h2>
             </div>
             <hr>
             <div>
