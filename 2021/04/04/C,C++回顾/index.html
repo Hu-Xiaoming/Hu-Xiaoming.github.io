@@ -290,97 +290,94 @@
 <li>…………</li>
 </ul>
 <p>下面我们用表格来表示一下规律。</p>
-<p>表1：n = 1</p>
-<table>
-<thead>
-<tr>
-<th align="center">0</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">1</td>
-</tr>
-</tbody></table>
-<p>如何由表 1 推到表 2：</p>
-<p>​    第一步：将表 1 拷贝两遍，形成表 2 的A区域</p>
-<p>​    第二步：将第二个元素的两种取值（0,1）插入表 2， 如表 2 B区域所示。</p>
-<p>表2：n = 2</p>
-<table>
-<thead>
-<tr>
-<th>A</th>
-<th>B</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>1</td>
-<td>0</td>
-</tr>
-<tr>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr>
-<td>1</td>
-<td>1</td>
-</tr>
-</tbody></table>
+<table width="400" height="150">
+    <caption align="top">表1 n=1</caption>
+    <tr>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td>1</td>
+    </tr>
+</table>
+
+
+<blockquote>
+<p>如何由表 1 推到表 2：<br>第1步：将表 1 拷贝两遍，形成表 2 的蓝色区域。<br>第2步：将第二个元素的两种取值（0,1）插入表 2， 如表 2 绿色区域所示。</p>
+</blockquote>
+<table width="400" height="150">
+  <caption align="top">表2 n=2</caption>
+  <tr>
+    <td style="background-color: blue">0</td>
+    <td style="background-color: green">0</td>
+  </tr>
+  <tr>
+    <td style="background-color: blue">1</td>
+    <td style="background-color: green">0</td>
+  </tr>
+  <tr>
+    <td style="background-color: blue">0</td>
+    <td style="background-color: green">1</td>
+  </tr>
+  <tr>
+    <td style="background-color: blue">1</td>
+    <td style="background-color: green">1</td>
+  </tr>
+</table>
+
+
+
+
+<blockquote>
 <p>表 2 推表 3 的步骤与表 1 推表 2 的步骤相同。</p>
-<p>表3：n = 3</p>
-<table>
-<thead>
-<tr>
-<th>A</th>
-<th>A</th>
-<th>B</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-</tr>
-<tr>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-</tr>
-<tr>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-</tr>
-<tr>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-</tr>
-</tbody></table>
-<p>上述的表 1 到 表 3 是即为程序中第7行的sequence数组，它采用二维表格存储结果。</p>
+</blockquote>
+<table width="400" height="150">
+  <caption align="top">表3 n=3</caption>
+  <tr>
+    <td style="background-color: blue">0</td>
+    <td style="background-color: blue">0</td>
+    <td style="background-color: green">0</td>
+  </tr>
+  <tr>
+    <td style="background-color: blue">1</td>
+    <td style="background-color: blue">0</td>
+    <td style="background-color: green">0</td>
+  </tr>
+  <tr>
+    <td style="background-color: blue">0</td>
+    <td style="background-color: blue">1</td>
+    <td style="background-color: green">0</td>
+  </tr>
+  <tr>
+    <td style="background-color: blue">1</td>
+    <td style="background-color: blue">1</td>
+    <td style="background-color: green">0</td>
+  </tr>
+  <tr>
+    <td style="background-color: blue">0</td>
+    <td style="background-color: blue">0</td>
+    <td style="background-color: green">1</td>
+  </tr>
+  <tr>
+    <td style="background-color: blue">1</td>
+    <td style="background-color: blue">0</td>
+    <td style="background-color: green">1</td>
+  </tr>
+  <tr>
+    <td style="background-color: blue">0</td>
+    <td style="background-color: blue">1</td>
+    <td style="background-color: green">1</td>
+  </tr>
+  <tr>
+    <td style="background-color: blue">1</td>
+    <td style="background-color: blue">1</td>
+    <td style="background-color: green">1</td>
+  </tr>
+</table>
+
+
+
+
+<p>　　上述的表 1 到 表 3 是即为程序中第7行的sequence数组，它采用二维表格存储结果。</p>
 <ol start="2">
 <li>二进制法<br>见<a href="#%E4%BB%A3%E7%A0%81%E6%B8%85%E5%8D%952">&lt;代码清单2&gt;</a>第37行函数<code>void subset_generation_with_non_recursive_funcation(const int n)</code></li>
 </ol>
