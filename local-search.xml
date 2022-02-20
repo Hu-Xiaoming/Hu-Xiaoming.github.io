@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>随笔1</title>
+    <link href="/2022/02/21/%E9%9A%8F%E7%AC%941/"/>
+    <url>/2022/02/21/%E9%9A%8F%E7%AC%941/</url>
+    
+    <content type="html"><![CDATA[<h1 id="数理逻辑中符号-rightarrow-、-leftrightarrow-、-Rightarrow-、-Leftrightarrow"><a href="#数理逻辑中符号-rightarrow-、-leftrightarrow-、-Rightarrow-、-Leftrightarrow" class="headerlink" title="数理逻辑中符号$\rightarrow$、$\leftrightarrow$、$\Rightarrow$、$\Leftrightarrow$"></a>数理逻辑中符号$\rightarrow$、$\leftrightarrow$、$\Rightarrow$、$\Leftrightarrow$</h1><h2 id="联结词"><a href="#联结词" class="headerlink" title="联结词"></a>联结词</h2><p>　　联结词用于联结两个命题，共有<strong>五种</strong>联结词：否定联结词<strong>“$\neg$”</strong>、合取联结词<strong>“$\land$”</strong>、析取联结词<strong>“$\lor$”</strong>、蕴涵联结词<strong>“$\rightarrow$”</strong>、等价联结词<strong>“$\leftrightarrow$”</strong>。</p><h3 id="rightarrow"><a href="#rightarrow" class="headerlink" title="$\rightarrow$"></a>$\rightarrow$</h3><p>　　称为<strong>蕴涵联结词</strong>，$p \rightarrow q$ 是“如果p，则q”的符号化形式。$p \rightarrow q$ 的真值表为：</p><table><thead><tr><th align="center">p</th><th align="center">q</th><th align="center">$p \rightarrow q$</th></tr></thead><tbody><tr><td align="center">0</td><td align="center">0</td><td align="center">1</td></tr><tr><td align="center">0</td><td align="center">1</td><td align="center">0</td></tr><tr><td align="center">1</td><td align="center">0</td><td align="center">1</td></tr><tr><td align="center">1</td><td align="center">1</td><td align="center">1</td></tr></tbody></table><h3 id="leftrightarrow"><a href="#leftrightarrow" class="headerlink" title="$\leftrightarrow$"></a>$\leftrightarrow$</h3><p>　　称为<strong>等价联结词</strong>，$p \leftrightarrow q$ 是“p当且仅当q”的符号化形式。$p \leftrightarrow q$ 的真值表为：</p><table><thead><tr><th align="center">p</th><th align="center">q</th><th align="center">$p \leftrightarrow q$</th></tr></thead><tbody><tr><td align="center">0</td><td align="center">0</td><td align="center">1</td></tr><tr><td align="center">0</td><td align="center">1</td><td align="center">0</td></tr><tr><td align="center">1</td><td align="center">0</td><td align="center">0</td></tr><tr><td align="center">1</td><td align="center">1</td><td align="center">1</td></tr></tbody></table><h2 id="等值与推理"><a href="#等值与推理" class="headerlink" title="等值与推理"></a>等值与推理</h2><h3 id="Rightarrow"><a href="#Rightarrow" class="headerlink" title="$\Rightarrow$"></a>$\Rightarrow$</h3><p>　　称为<strong>推导符号</strong>，当$A \rightarrow B$ 为永真式（重言式）时，可以表示为$A \Rightarrow B$。</p><h3 id="Leftrightarrow"><a href="#Leftrightarrow" class="headerlink" title="$\Leftrightarrow$"></a>$\Leftrightarrow$</h3><p>　　称为<strong>等价符号</strong>，当$A \leftrightarrow B$ 为永真式（重言式）时，可以表示为$A \Leftrightarrow B$。　　</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>数学</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Webots自学之路（一）</title>
     <link href="/2022/01/05/Webots%E8%87%AA%E5%AD%A6%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/"/>
     <url>/2022/01/05/Webots%E8%87%AA%E5%AD%A6%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/</url>
