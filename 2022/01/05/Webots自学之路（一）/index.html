@@ -197,7 +197,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      3.4k 字
+      4.1k 字
     </span>
   
 
@@ -207,7 +207,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      44
+      52
        分钟
     </span>
   
@@ -282,7 +282,7 @@
 </blockquote>
 <h3 id="2-1-实体结点（The-Solid-Node）"><a href="#2-1-实体结点（The-Solid-Node）" class="headerlink" title="2.1 实体结点（The Solid Node）"></a>2.1 实体结点（The Solid Node）</h3><h3 id="2-2-创建一个球"><a href="#2-2-创建一个球" class="headerlink" title="2.2 创建一个球"></a>2.2 创建一个球</h3><p>　　接下来，我们要建模一个刚体球。</p>
 <blockquote>
-<p>&lt;动手 #1&gt;：<sup>【注】：翻译自Webots / User Guide / Tutorial / Tutorials 2 / Create a Ball / Hands-on #4。</sup><br>　　在场景树中，选择最后一个结点，点击<strong>Add</strong>按钮。在新出现的对话框中，选择<strong>Solid</strong>（<strong>Base nodes $\to$ Solid</strong>），点击<strong>Add</strong>创建一个Solid结点。在场景树中，展开新创建的Solid结点，选择<strong>children</strong>字段，点击<strong>Add</strong>按钮。在新出现的对话框中，选择<strong>Shape</strong>（<strong>Base nodes $\to$ Shape</strong>），点击<strong>Add</strong>创建一个Shape结点。此时Solid只是一个点。展开Shape结点，选择<strong>appearance</strong>字段，添加一个<strong>PBRAppearance</strong>（<strong>Base nodes$\to$ PBRAppearance</strong>）结点；展开Shape结点，选择<strong>geometry</strong>字段，添加一个<strong>Sphere</strong>结点。展开<strong>PBRAppearance</strong>结点，将<strong>metalness</strong>字段设置为0，再将<strong>roughness</strong>字段设置为1。在Solid结点中，选择<strong>boudingObject</strong>字段，添加一个<strong>Sphere</strong>结点，然后，选择<strong>physics</strong>字段，添加一个<strong>Physics</strong>字段。</p>
+<p>&lt;动手 #1&gt;：<sup>【注】：翻译自Webots / User Guide / Tutorial / Tutorials 2 / Create a Ball / Hands-on #4。</sup><br>　　在场景树中，选择最后一个结点，点击<strong>Add</strong>按钮。在新出现的对话框中，选择<strong>Solid</strong>（<strong>Base nodes $\to$ Solid</strong>），点击<strong>Add</strong>创建一个Solid结点。在场景树中，展开新创建的Solid结点，选择<strong>children</strong>字段，点击<strong>Add</strong>按钮。在新出现的对话框中，选择<strong>Shape</strong>（<strong>Base nodes $\to$ Shape</strong>），点击<strong>Add</strong>创建一个Shape结点。此时Solid只是一个点。展开Shape结点，选择<strong>appearance</strong>字段，添加一个<strong>PBRAppearance</strong>（<strong>Base nodes$\to$ PBRAppearance</strong>）结点；展开Shape结点，选择<strong>geometry</strong>字段，添加一个<strong>Sphere</strong>结点。展开<strong>PBRAppearance</strong>结点，将<strong>metalness</strong>字段设置为0，再将<strong>roughness</strong>字段设置为1。在Solid结点中，选择<strong>boudingObject</strong>字段，添加一个<strong>Sphere</strong>结点，然后，选择<strong>physics</strong>字段，添加一个<strong>Physics</strong>结点。</p>
 <p>【注】：各节点和各字段的详细信息可以在Webots参考手册（Webots Reference Manual）中查询，下面给出metalness字段和roughness字段的说明。</p>
 <ul>
 <li>metalness字段用于指明Solid表面的金属特性，取值范围为0~1，金属度为0表示完全绝缘材料，而金属度为1表示完全金属材料。在实际中，其值设置，一般非0即1，因为现实中没有部分金属材料。</li>
@@ -440,7 +440,31 @@
 <p>&lt;程序清单 #9&gt;：</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs C"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> MAX_SPEED 6.28</span><br>...<br><span class="hljs-comment">// initialize motor speeds at 50% of MAX_SPEED.</span><br><span class="hljs-keyword">double</span> left_speed  = <span class="hljs-number">0.5</span> * MAX_SPEED;<br><span class="hljs-keyword">double</span> right_speed = <span class="hljs-number">0.5</span> * MAX_SPEED;<br><span class="hljs-comment">// modify speeds according to obstacles</span><br><span class="hljs-keyword">if</span> (left_obstacle) &#123;<br>  <span class="hljs-comment">// turn right</span><br>  left_speed  = <span class="hljs-number">0.5</span> * MAX_SPEED;<br>  right_speed = <span class="hljs-number">-0.5</span> * MAX_SPEED;<br>&#125;<br><span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (right_obstacle) &#123;<br>  <span class="hljs-comment">// turn left</span><br>  left_speed  = <span class="hljs-number">-0.5</span> * MAX_SPEED;<br>  right_speed = <span class="hljs-number">0.5</span> * MAX_SPEED;<br>&#125;<br><span class="hljs-comment">// write actuators inputs</span><br>wb_motor_set_velocity(left_motor, left_speed);<br>wb_motor_set_velocity(right_motor, right_speed);<br></code></pre></td></tr></table></figure></li>
 </ol>
-<h2 id="5-Conpound-Solid-and-Physics-Attributes"><a href="#5-Conpound-Solid-and-Physics-Attributes" class="headerlink" title="5 Conpound Solid and Physics Attributes"></a>5 Conpound Solid and Physics Attributes</h2><h2 id="6-4-Wheels-Robot"><a href="#6-4-Wheels-Robot" class="headerlink" title="6 4-Wheels Robot"></a>6 4-Wheels Robot</h2><h2 id="7-My-First-PROTO"><a href="#7-My-First-PROTO" class="headerlink" title="7 My First PROTO"></a>7 My First PROTO</h2><h2 id="8-Using-ROS"><a href="#8-Using-ROS" class="headerlink" title="8 Using ROS"></a>8 Using ROS</h2><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol>
+<h2 id="5-Conpound-Solid-and-Physics-Attributes"><a href="#5-Conpound-Solid-and-Physics-Attributes" class="headerlink" title="5 Conpound Solid and Physics Attributes"></a>5 Conpound Solid and Physics Attributes</h2><blockquote>
+<p>本节主要内容：</p>
+<ol>
+<li>讲述了复合实体，并利复合实体构建一个哑铃（由两个球和一个圆柱体构成）。</li>
+<li>讲述了Group结点、Transform结点。</li>
+<li>讲述了一些简单的物理属性，比如：质量mass、密度density、质心centerOfMass。</li>
+</ol>
+</blockquote>
+<h3 id="5-1-复合实体（Conpound-Solid）"><a href="#5-1-复合实体（Conpound-Solid）" class="headerlink" title="5.1 复合实体（Conpound Solid）"></a>5.1 复合实体（Conpound Solid）</h3><p>　　在上面小节中我们所构造的实体，无论是球还是墙，都是只有<strong>一个</strong>几何体（或者是球体、或者是长方体），然而，现实中我们需要构造更复杂的实体（可能需要多个几何体来构成），比如：哑铃，它是由一个圆柱和两个球体构成的。这时，就需要引入<strong>复合实体Conpound Solid</strong>，利用<strong>Group</strong>结点来构建复杂模型，如图15所示，将三个几何体结点都放入Group结点的children字段里。</p>
+<p>　　为了让哑铃片（Shape结点）可以相对哑铃（Solid结点）移动、旋转，故将哑铃片（Shape结点）放置在Transform结点中。哑铃杆（Shape结点）没有必要可以相对哑铃运动，故没有将哑铃杆（Shape结点）放置在Transform结点中。</p>
+<blockquote>
+<p>&lt;动手 #8&gt;：<sup>【注】：翻译自Webots / User Guide / Tutorial / Tutorials 5 / Hands-on #1~2。</sup></p>
+<ol>
+<li>将原来的环境另存为compound_solid.wbt。【注】：创建方法同3.1节，这里不再赘述。</li>
+<li>按照图15创建实体（哑铃）。</li>
+<li>其中，圆柱（哑铃杆）的长为0.1， 半径为0.01；球体（哑铃片）半径为0.03， 细分度<strong>subdivision</strong>为2。<strong>注意</strong>：不要忘记（官方教程中没有提到）给这三个几何体的外表<strong>Shape/Appearance</strong>添加<strong>PBRAppearance</strong>结点，并将<strong>metalness</strong>字段设置为0、<strong>roughness</strong>字段设置为1，&lt;动手 #1&gt;中有详细的步骤，这里不再赘述。</li>
+<li>最终结果如图16所示。</li>
+</ol>
+</blockquote>
+<p><img src="/2022/01/05/Webots%E8%87%AA%E5%AD%A6%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/%E5%93%91%E9%93%83%E5%AE%9E%E4%BD%93%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.png" srcset="/img/loading.gif" lazyload alt="图15 哑铃实体的结构图。由多个几何体子结点所构成"></p>
+<p><img src="/2022/01/05/Webots%E8%87%AA%E5%AD%A6%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/%E5%93%91%E9%93%83%E6%9E%84%E9%80%A0%E5%AE%8C%E6%88%90%E7%A4%BA%E6%84%8F%E5%9B%BE.png" srcset="/img/loading.gif" lazyload alt="哑铃构造完成示意图"></p>
+<h3 id="5-2-物理属性"><a href="#5-2-物理属性" class="headerlink" title="5.2 物理属性"></a>5.2 物理属性</h3><p>　　本小节主要讲述了实体结点的一些简单的物理属性，这些物理属性都是在Physics结点（添加在Solid/physics字段）中调节的。</p>
+<p>　　其中，主要是设置实体的质量，有两种方法：一是指定质量mass字段，二是指定密度density字段。当指定mass字段时，它定义固体的总质量（单位[kg]）；当指定density字段时，其值（单位[kg/m3]）乘以实体的体积，即为实体的总质量。1000[kg/m³]的密度对应于水的密度（默认值）。两种方法只能二选一（另一个字段在不使用时应当设置为-1）。</p>
+<p>　　另外，关于质心，默认情况下，实体节点的质心设置在其原点（原点由实体的translation字段定义）。也可以通过Physics结点中的centerOfMass字段修改，其值是相对于原点指定的。</p>
+<h2 id="6-4-Wheels-Robot"><a href="#6-4-Wheels-Robot" class="headerlink" title="6 4-Wheels Robot"></a>6 4-Wheels Robot</h2><h2 id="7-My-First-PROTO"><a href="#7-My-First-PROTO" class="headerlink" title="7 My First PROTO"></a>7 My First PROTO</h2><h2 id="8-Using-ROS"><a href="#8-Using-ROS" class="headerlink" title="8 Using ROS"></a>8 Using ROS</h2><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol>
 <li>Webots的用户指导.</li>
 </ol>
 
