@@ -283,20 +283,20 @@
             <p>本文<strong>转载</strong>自CSDN，原文标题为：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_41498261/article/details/109112331">详细了解PyCharm支持的4种Python Interpreter和配置方法</a></p>
           </div>
 
-<h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>　　初次使用Pycharm的时候，可能会对于解释器的配置有些疑问，因为PyCharm支持以下4种Python Interpreter:</p>
+<h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>初次使用Pycharm的时候，可能会对于解释器的配置有些疑问，因为PyCharm支持以下4种Python Interpreter:</p>
 <ul>
 <li>Virtualenv Environment</li>
 <li>Conda Environment</li>
 <li>System Interpreter</li>
 <li>Pipenv Environment</li>
 </ul>
-<h2 id="1-Virtualenv-Environment"><a href="#1-Virtualenv-Environment" class="headerlink" title="1 Virtualenv Environment"></a>1 Virtualenv Environment</h2><h3 id="1-1-Virtualenv-Environment是什么？"><a href="#1-1-Virtualenv-Environment是什么？" class="headerlink" title="1.1 Virtualenv Environment是什么？"></a>1.1 Virtualenv Environment是什么？</h3><p>　　Python的虚拟环境可以使一个Python程序拥有独立的库(<strong>library</strong>)和解释器(<strong>interpreter</strong>)，而不用与其他Python程序共享同一个library和interpreter。虚拟环境的好处是避免了不同Python程序间的互相影响（共同使用全局的(<strong>global</strong>) library 和 interpreter），例如程序A需要某个库的1.0版本，而程序B需要同样这个库的2.0版本，如果程序B执行，则A就不能执行了。</p>
+<h2 id="1-Virtualenv-Environment"><a href="#1-Virtualenv-Environment" class="headerlink" title="1 Virtualenv Environment"></a>1 Virtualenv Environment</h2><h3 id="1-1-Virtualenv-Environment是什么？"><a href="#1-1-Virtualenv-Environment是什么？" class="headerlink" title="1.1 Virtualenv Environment是什么？"></a>1.1 Virtualenv Environment是什么？</h3><p>Python的虚拟环境可以使一个Python程序拥有独立的库(<strong>library</strong>)和解释器(<strong>interpreter</strong>)，而不用与其他Python程序共享同一个library和interpreter。虚拟环境的好处是避免了不同Python程序间的互相影响（共同使用全局的(<strong>global</strong>) library 和 interpreter），例如程序A需要某个库的1.0版本，而程序B需要同样这个库的2.0版本，如果程序B执行，则A就不能执行了。</p>
 <blockquote>
 <p>virtualenv，是一款Python工具，用以创建独立的Python虚拟环境。在一个Python虚拟环境中，持有Python所必须的依赖库，形成Python的虚拟运行空间。</p>
 </blockquote>
-<p>　　Pycharm中集成了Virtual Environment工具，用以创建独立的虚拟环境。</p>
-<p>　　Virtual Environment主要解决的库依赖和版本依赖、以及间接授权等问题。</p>
-<h3 id="1-2-如何使用Virtualenv-Environment？"><a href="#1-2-如何使用Virtualenv-Environment？" class="headerlink" title="1.2 如何使用Virtualenv Environment？"></a>1.2 如何使用Virtualenv Environment？</h3><p>　　打开Pycharm的Virtualenv Environment配置界面，发现存在两种配置方式：</p>
+<p>Pycharm中集成了Virtual Environment工具，用以创建独立的虚拟环境。</p>
+<p>Virtual Environment主要解决的库依赖和版本依赖、以及间接授权等问题。</p>
+<h3 id="1-2-如何使用Virtualenv-Environment？"><a href="#1-2-如何使用Virtualenv-Environment？" class="headerlink" title="1.2 如何使用Virtualenv Environment？"></a>1.2 如何使用Virtualenv Environment？</h3><p>打开Pycharm的Virtualenv Environment配置界面，发现存在两种配置方式：</p>
 <p><img src="/2022/04/12/PyCharm%E4%B8%ADPython-Interprets%E7%9A%84%E9%85%8D%E7%BD%AE/Virtualenv_Environment%E9%85%8D%E7%BD%AE%E7%95%8C%E9%9D%A2.png" srcset="/img/loading.gif" lazyload alt="图1 Virtualenv Environment配置界面"></p>
 <h4 id="1-2-1-New-environment"><a href="#1-2-1-New-environment" class="headerlink" title="1.2.1 New environment"></a>1.2.1 New environment</h4><p><img src="/2022/04/12/PyCharm%E4%B8%ADPython-Interprets%E7%9A%84%E9%85%8D%E7%BD%AE/new_environment%E6%96%B9%E5%BC%8F%E9%85%8D%E7%BD%AE%E7%A4%BA%E6%84%8F%E5%9B%BE.png" srcset="/img/loading.gif" lazyload alt="图2 new environment方式配置示意图"></p>
 <p>需要配置的项：</p>
@@ -321,18 +321,18 @@
 </li>
 </ul>
 <p>配置完成后，点击<code>OK</code>，会发现在<code>F:\WorkPlace\pyhanlp</code>目录下生成了一个<code>venv</code>文件夹。</p>
-<h4 id="1-2-2-Existing-environment"><a href="#1-2-2-Existing-environment" class="headerlink" title="1.2.2 Existing environment"></a>1.2.2 Existing environment</h4><p>　　<code>Existing environment</code>中只需要配置一项任务:<code>Interpreter</code>。这个就是指定你的电脑中已经存在的一项虚拟环境目录。</p>
-<p>　　已经存在的虚拟环境目录可以是：</p>
+<h4 id="1-2-2-Existing-environment"><a href="#1-2-2-Existing-environment" class="headerlink" title="1.2.2 Existing environment"></a>1.2.2 Existing environment</h4><p><code>Existing environment</code>中只需要配置一项任务:<code>Interpreter</code>。这个就是指定你的电脑中已经存在的一项虚拟环境目录。</p>
+<p>已经存在的虚拟环境目录可以是：</p>
 <ol>
 <li>自己通过控制台建立的一个新的虚拟环境目录。</li>
 <li>自己以前通过<code>New environment</code>创建的虚拟环境的目录。</li>
 </ol>
-<h2 id="2-Conda-Environment"><a href="#2-Conda-Environment" class="headerlink" title="2 Conda Environment"></a>2 Conda Environment</h2><h3 id="2-1-Conda-Environment是什么？"><a href="#2-1-Conda-Environment是什么？" class="headerlink" title="2.1 Conda Environment是什么？"></a>2.1 Conda Environment是什么？</h3><p>　　<code>Conda Environment</code>就是使用Anaconda中带有的Python解释器。</p>
-<p>　　安装Anaconda软件，Anaconda会自带很多的包，其中包括Python解释器。因此如果电脑中安装了Anaconda软件，也可以使用Anaconda里面附带安装的Python解释器或者通过Anaconda创建的虚拟Python解释器。和上面的操作类似。</p>
-<h3 id="2-2-如何配置-Conda-Environment？"><a href="#2-2-如何配置-Conda-Environment？" class="headerlink" title="2.2 如何配置 Conda Environment？"></a>2.2 如何配置 Conda Environment？</h3><p>　　打开Pycharm的Conda Environment配置界面，发现存在两种配置方式：</p>
+<h2 id="2-Conda-Environment"><a href="#2-Conda-Environment" class="headerlink" title="2 Conda Environment"></a>2 Conda Environment</h2><h3 id="2-1-Conda-Environment是什么？"><a href="#2-1-Conda-Environment是什么？" class="headerlink" title="2.1 Conda Environment是什么？"></a>2.1 Conda Environment是什么？</h3><p><code>Conda Environment</code>就是使用Anaconda中带有的Python解释器。</p>
+<p>安装Anaconda软件，Anaconda会自带很多的包，其中包括Python解释器。因此如果电脑中安装了Anaconda软件，也可以使用Anaconda里面附带安装的Python解释器或者通过Anaconda创建的虚拟Python解释器。和上面的操作类似。</p>
+<h3 id="2-2-如何配置-Conda-Environment？"><a href="#2-2-如何配置-Conda-Environment？" class="headerlink" title="2.2 如何配置 Conda Environment？"></a>2.2 如何配置 Conda Environment？</h3><p>打开Pycharm的Conda Environment配置界面，发现存在两种配置方式：</p>
 <p><img src="/2022/04/12/PyCharm%E4%B8%ADPython-Interprets%E7%9A%84%E9%85%8D%E7%BD%AE/Conda_Environment%E9%85%8D%E7%BD%AE%E7%95%8C%E9%9D%A2.png" srcset="/img/loading.gif" lazyload alt="图3 Conda Environment配置界面"></p>
 <p>【注】<code>图3</code>左下角提示<code>Conda executable path is empty</code>是因为我没安装Conda。</p>
-<h4 id="2-2-1-New-environment"><a href="#2-2-1-New-environment" class="headerlink" title="2.2.1 New environment"></a>2.2.1 New environment</h4><p>　　使用Anaconda创建一个新的虚拟Python环境。Anaconda会帮我们下载所指定的Python版本。</p>
+<h4 id="2-2-1-New-environment"><a href="#2-2-1-New-environment" class="headerlink" title="2.2.1 New environment"></a>2.2.1 New environment</h4><p>使用Anaconda创建一个新的虚拟Python环境。Anaconda会帮我们下载所指定的Python版本。</p>
 <p><img src="/2022/04/12/PyCharm%E4%B8%ADPython-Interprets%E7%9A%84%E9%85%8D%E7%BD%AE/new_environment%E6%96%B9%E5%BC%8F%E9%85%8D%E7%BD%AE%E7%A4%BA%E6%84%8F%E5%9B%BE(conda).png" srcset="/img/loading.gif" lazyload alt="图4 new environment方式配置示意图"></p>
 <p>需要配置的项：</p>
 <ul>

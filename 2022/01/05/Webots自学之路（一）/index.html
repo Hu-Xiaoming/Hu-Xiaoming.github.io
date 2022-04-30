@@ -279,9 +279,9 @@
             <h1 style="display: none">Webots自学之路（一）</h1>
             
             <div class="markdown-body">
-              <h1 id="webots自学之路（一）"><a href="#webots自学之路（一）" class="headerlink" title="webots自学之路（一）"></a>webots自学之路（一）</h1><h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>　　基于webots的用户指导（User Guide），记录webots仿真软件的学习。</p>
+              <h1 id="webots自学之路（一）"><a href="#webots自学之路（一）" class="headerlink" title="webots自学之路（一）"></a>webots自学之路（一）</h1><h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>基于webots的用户指导（User Guide），记录webots仿真软件的学习。</p>
 <p><img src="/2022/01/05/Webots%E8%87%AA%E5%AD%A6%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/sence.png" srcset="/img/loading.gif" lazyload alt="图1 Webots界面简介图"></p>
-<p>　　当场景树、文本编辑器、控制台关闭后如何打开？点击Menu / Tools，如图所示，从中进行开关。</p>
+<p>当场景树、文本编辑器、控制台关闭后如何打开？点击Menu / Tools，如图所示，从中进行开关。</p>
 <p><img src="/2022/01/05/Webots%E8%87%AA%E5%AD%A6%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/Webots%E7%95%8C%E9%9D%A2%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C.png" srcset="/img/loading.gif" lazyload alt="图2 Webots界面基本操作"></p>
 <h2 id="1-My-First-Simulation-in-Webots"><a href="#1-My-First-Simulation-in-Webots" class="headerlink" title="1 My First Simulation in Webots"></a>1 My First Simulation in Webots</h2><blockquote>
 <p>本节主要内容：</p>
@@ -293,12 +293,12 @@
 <li>如何创建控制器（<strong>Controller</strong>）？</li>
 </ul>
 </blockquote>
-<h3 id="1-1-创建新项目"><a href="#1-1-创建新项目" class="headerlink" title="1.1 创建新项目"></a>1.1 创建新项目</h3><p>　　在菜单栏中，选择Wizards $\to$ New Project Directory，如下图所示。 </p>
+<h3 id="1-1-创建新项目"><a href="#1-1-创建新项目" class="headerlink" title="1.1 创建新项目"></a>1.1 创建新项目</h3><p>在菜单栏中，选择Wizards $\to$ New Project Directory，如下图所示。 </p>
 <p><img src="/2022/01/05/Webots%E8%87%AA%E5%AD%A6%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/create_new_project.png" srcset="/img/loading.gif" lazyload alt="图3 创建新项目示意图"></p>
-<h3 id="1-2-对物体施加一个力（Apply-a-Force）"><a href="#1-2-对物体施加一个力（Apply-a-Force）" class="headerlink" title="1.2 对物体施加一个力（Apply a Force）"></a>1.2 对物体施加一个力（Apply a Force）</h3><p>　　在模拟过程中，使用<strong>Alt键 + 鼠标左键 + 鼠标拖拽</strong>可以对物体（<strong>e-puck Robot</strong>）施加一个力，这会导致机器人被拖走；如果对箱子（<strong>WoodenBox(Solid)<strong>）进行该操作，箱子没有什么反应，原因是箱子默认是不考虑质量（</strong>mass</strong>）的。如果给箱子一个质量，箱子就可以进行拖拽了，假如给箱子的质量足够小，机器人也可以推动箱子。</p>
-<h3 id="1-3-创建控制器（Controller）"><a href="#1-3-创建控制器（Controller）" class="headerlink" title="1.3 创建控制器（Controller）"></a>1.3 创建控制器（Controller）</h3><p>　　在菜单栏中，选择Wizards $\to$ New Robot Controller，如下图所示。 </p>
+<h3 id="1-2-对物体施加一个力（Apply-a-Force）"><a href="#1-2-对物体施加一个力（Apply-a-Force）" class="headerlink" title="1.2 对物体施加一个力（Apply a Force）"></a>1.2 对物体施加一个力（Apply a Force）</h3><p>在模拟过程中，使用<strong>Alt键 + 鼠标左键 + 鼠标拖拽</strong>可以对物体（<strong>e-puck Robot</strong>）施加一个力，这会导致机器人被拖走；如果对箱子（<strong>WoodenBox(Solid)<strong>）进行该操作，箱子没有什么反应，原因是箱子默认是不考虑质量（</strong>mass</strong>）的。如果给箱子一个质量，箱子就可以进行拖拽了，假如给箱子的质量足够小，机器人也可以推动箱子。</p>
+<h3 id="1-3-创建控制器（Controller）"><a href="#1-3-创建控制器（Controller）" class="headerlink" title="1.3 创建控制器（Controller）"></a>1.3 创建控制器（Controller）</h3><p>在菜单栏中，选择Wizards $\to$ New Robot Controller，如下图所示。 </p>
 <p><img src="/2022/01/05/Webots%E8%87%AA%E5%AD%A6%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/create_new_controller.png" srcset="/img/loading.gif" lazyload alt="图4 创建控制器示意图"></p>
-<p>　　创建完成后，要将新建的控制器与机器人连接起来。”<strong>epuck_go_forward</strong>“ 就是我们创建的控制器。下图展示了控制器连接完成的结果。</p>
+<p>创建完成后，要将新建的控制器与机器人连接起来。”<strong>epuck_go_forward</strong>“ 就是我们创建的控制器。下图展示了控制器连接完成的结果。</p>
 <p><img src="/2022/01/05/Webots%E8%87%AA%E5%AD%A6%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/associate_controller.png" srcset="/img/loading.gif" lazyload alt="图5 控制器连接完成示意图"></p>
 <h2 id="2-Modification-of-the-Environment"><a href="#2-Modification-of-the-Environment" class="headerlink" title="2 Modification of the Environment"></a>2 Modification of the Environment</h2><blockquote>
 <p>本节主要内容：</p>
@@ -311,28 +311,28 @@
 <li>介绍了DEF-USE机制（<strong>DEF-USE Mechanism</strong>）</li>
 </ul>
 </blockquote>
-<h3 id="2-1-实体结点（The-Solid-Node）"><a href="#2-1-实体结点（The-Solid-Node）" class="headerlink" title="2.1 实体结点（The Solid Node）"></a>2.1 实体结点（The Solid Node）</h3><h3 id="2-2-创建一个球"><a href="#2-2-创建一个球" class="headerlink" title="2.2 创建一个球"></a>2.2 创建一个球</h3><p>　　接下来，我们要建模一个刚体球。</p>
+<h3 id="2-1-实体结点（The-Solid-Node）"><a href="#2-1-实体结点（The-Solid-Node）" class="headerlink" title="2.1 实体结点（The Solid Node）"></a>2.1 实体结点（The Solid Node）</h3><h3 id="2-2-创建一个球"><a href="#2-2-创建一个球" class="headerlink" title="2.2 创建一个球"></a>2.2 创建一个球</h3><p>接下来，我们要建模一个刚体球。</p>
 <blockquote>
-<p>&lt;动手 #1&gt;：<sup>【注】：翻译自Webots / User Guide / Tutorial / Tutorials 2 / Create a Ball / Hands-on #4。</sup><br>　　在场景树中，选择最后一个结点，点击<strong>Add</strong>按钮。在新出现的对话框中，选择<strong>Solid</strong>（<strong>Base nodes $\to$ Solid</strong>），点击<strong>Add</strong>创建一个Solid结点。在场景树中，展开新创建的Solid结点，选择<strong>children</strong>字段，点击<strong>Add</strong>按钮。在新出现的对话框中，选择<strong>Shape</strong>（<strong>Base nodes $\to$ Shape</strong>），点击<strong>Add</strong>创建一个Shape结点。此时Solid只是一个点。展开Shape结点，选择<strong>appearance</strong>字段，添加一个<strong>PBRAppearance</strong>（<strong>Base nodes$\to$ PBRAppearance</strong>）结点；展开Shape结点，选择<strong>geometry</strong>字段，添加一个<strong>Sphere</strong>结点。展开<strong>PBRAppearance</strong>结点，将<strong>metalness</strong>字段设置为0，再将<strong>roughness</strong>字段设置为1。在Solid结点中，选择<strong>boudingObject</strong>字段，添加一个<strong>Sphere</strong>结点，然后，选择<strong>physics</strong>字段，添加一个<strong>Physics</strong>结点。</p>
+<p>&lt;动手 #1&gt;：<sup>【注】：翻译自Webots / User Guide / Tutorial / Tutorials 2 / Create a Ball / Hands-on #4。</sup><br>在场景树中，选择最后一个结点，点击<strong>Add</strong>按钮。在新出现的对话框中，选择<strong>Solid</strong>（<strong>Base nodes $\to$ Solid</strong>），点击<strong>Add</strong>创建一个Solid结点。在场景树中，展开新创建的Solid结点，选择<strong>children</strong>字段，点击<strong>Add</strong>按钮。在新出现的对话框中，选择<strong>Shape</strong>（<strong>Base nodes $\to$ Shape</strong>），点击<strong>Add</strong>创建一个Shape结点。此时Solid只是一个点。展开Shape结点，选择<strong>appearance</strong>字段，添加一个<strong>PBRAppearance</strong>（<strong>Base nodes$\to$ PBRAppearance</strong>）结点；展开Shape结点，选择<strong>geometry</strong>字段，添加一个<strong>Sphere</strong>结点。展开<strong>PBRAppearance</strong>结点，将<strong>metalness</strong>字段设置为0，再将<strong>roughness</strong>字段设置为1。在Solid结点中，选择<strong>boudingObject</strong>字段，添加一个<strong>Sphere</strong>结点，然后，选择<strong>physics</strong>字段，添加一个<strong>Physics</strong>结点。</p>
 <p>【注】：各节点和各字段的详细信息可以在Webots参考手册（Webots Reference Manual）中查询，下面给出metalness字段和roughness字段的说明。</p>
 <ul>
 <li>metalness字段用于指明Solid表面的金属特性，取值范围为0~1，金属度为0表示完全绝缘材料，而金属度为1表示完全金属材料。在实际中，其值设置，一般非0即1，因为现实中没有部分金属材料。</li>
 <li>roughness字段用于指明Solid表面的粗糙度，取值范围为0~1，粗糙度为0表示非常光滑，而粗糙度为1表示非常粗糙。</li>
 </ul>
 </blockquote>
-<p>　　结果如下图所示：</p>
+<p>结果如下图所示：</p>
 <p><img src="/2022/01/05/Webots%E8%87%AA%E5%AD%A6%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/ball_1.png" srcset="/img/loading.gif" lazyload alt="图6 球创建完成示意图"></p>
-<h4 id="2-2-1-显示球与地面的接触线"><a href="#2-2-1-显示球与地面的接触线" class="headerlink" title="2.2.1 显示球与地面的接触线"></a>2.2.1 显示球与地面的接触线</h4><p>　　打开Show Contact Points（Menu / View / Optional Rendering / Show Contact Points）。</p>
-<h4 id="2-2-2-让球变得更圆"><a href="#2-2-2-让球变得更圆" class="headerlink" title="2.2.2 让球变得更圆"></a>2.2.2 让球变得更圆</h4><p>　　此时，有两个<strong>Sphere</strong>结点，一个用于几何表示（<strong>children</strong>字段），一个用于定义物理边界（<strong>boundingObject</strong>字段）。将这两个Sphere结点的<strong>radius</strong>字段设置为0.05、<strong>subdivision</strong>字段设置为2。</p>
+<h4 id="2-2-1-显示球与地面的接触线"><a href="#2-2-1-显示球与地面的接触线" class="headerlink" title="2.2.1 显示球与地面的接触线"></a>2.2.1 显示球与地面的接触线</h4><p>打开Show Contact Points（Menu / View / Optional Rendering / Show Contact Points）。</p>
+<h4 id="2-2-2-让球变得更圆"><a href="#2-2-2-让球变得更圆" class="headerlink" title="2.2.2 让球变得更圆"></a>2.2.2 让球变得更圆</h4><p>此时，有两个<strong>Sphere</strong>结点，一个用于几何表示（<strong>children</strong>字段），一个用于定义物理边界（<strong>boundingObject</strong>字段）。将这两个Sphere结点的<strong>radius</strong>字段设置为0.05、<strong>subdivision</strong>字段设置为2。</p>
 <p>【注】：</p>
 <ul>
 <li>subdivision字段用于指明细分度，取值范围为1~5。</li>
 </ul>
-<h3 id="2-3-DEF-USE机制"><a href="#2-3-DEF-USE机制" class="headerlink" title="2.3 DEF-USE机制"></a>2.3 DEF-USE机制</h3><p>　　DEF-USE机制，类似于程序设计中经常把多次用到的功能写成一个子函数，方便多次调用。比如，2.2.2节中两个Sphere结点都是相同的信息，故可以用DEF-USE机制合并它们。</p>
+<h3 id="2-3-DEF-USE机制"><a href="#2-3-DEF-USE机制" class="headerlink" title="2.3 DEF-USE机制"></a>2.3 DEF-USE机制</h3><p>DEF-USE机制，类似于程序设计中经常把多次用到的功能写成一个子函数，方便多次调用。比如，2.2.2节中两个Sphere结点都是相同的信息，故可以用DEF-USE机制合并它们。</p>
 <blockquote>
-<p>&lt;动手 #2&gt;：<sup>【注】：翻译自Webots / User Guide / Tutorial / Tutorials 2 / DEF-USE Mechanism / Hands-on #6。</sup><br>　　选择第一个Sphere结点（children字段中的），在字段编辑器中的DEF框里，敲入BALL_GEOMETRY。选择boundingObject字段（包含第二个Sphere结点），点击右键选中<strong>Delete</strong>，清空它的信息。选择boundingObject字段， 添加BALL_GEOMETRY结点（USE / BALL_GEOMETRY）。</p>
+<p>&lt;动手 #2&gt;：<sup>【注】：翻译自Webots / User Guide / Tutorial / Tutorials 2 / DEF-USE Mechanism / Hands-on #6。</sup><br>选择第一个Sphere结点（children字段中的），在字段编辑器中的DEF框里，敲入BALL_GEOMETRY。选择boundingObject字段（包含第二个Sphere结点），点击右键选中<strong>Delete</strong>，清空它的信息。选择boundingObject字段， 添加BALL_GEOMETRY结点（USE / BALL_GEOMETRY）。</p>
 </blockquote>
-<p>　　这样，可以在修改第一个Sphere结点的信息后，第二个Sphere结点的信息也自动同步更新。</p>
+<p>这样，可以在修改第一个Sphere结点的信息后，第二个Sphere结点的信息也自动同步更新。</p>
 <p><img src="/2022/01/05/Webots%E8%87%AA%E5%AD%A6%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/DEF-USE%E6%9C%BA%E5%88%B6%E7%A4%BA%E6%84%8F%E5%9B%BE.png" srcset="/img/loading.gif" lazyload alt="图7 DEF-USE机制示意图"></p>
 <h3 id="2-4-建墙"><a href="#2-4-建墙" class="headerlink" title="2.4 建墙"></a>2.4 建墙</h3><blockquote>
 <p>要求：</p>
@@ -342,7 +342,7 @@
 <li>墙是静态的。</li>
 </ul>
 </blockquote>
-<p>　　接下来，我们开始建墙。</p>
+<p>接下来，我们开始建墙。</p>
 <blockquote>
 <p>&lt;动手 #3&gt;：</p>
 <ol>
@@ -357,7 +357,7 @@
 <li>第三、四堵墙同理。</li>
 </ol>
 </blockquote>
-<p>　　此时，进行模拟，会发现机器穿墙而过，这是由于没有设置boundingObejct和physics字段，即此时墙还没有物理特性。设置完成后（与&lt;动手 #1&gt;类似，这里不再赘述。），机器人不再被允许穿墙而过。如果希望机器人可以撞开墙逃出去，可以在physics中将质量mass设置为一个较小值，此时，机器人可以撞开墙逃逸。</p>
+<p>此时，进行模拟，会发现机器穿墙而过，这是由于没有设置boundingObejct和physics字段，即此时墙还没有物理特性。设置完成后（与&lt;动手 #1&gt;类似，这里不再赘述。），机器人不再被允许穿墙而过。如果希望机器人可以撞开墙逃出去，可以在physics中将质量mass设置为一个较小值，此时，机器人可以撞开墙逃逸。</p>
 <p><img src="/2022/01/05/Webots%E8%87%AA%E5%AD%A6%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/%E5%A2%99%E5%BB%BA%E7%AB%8B%E5%AE%8C%E6%88%90%E7%A4%BA%E6%84%8F%E5%9B%BE.png" srcset="/img/loading.gif" lazyload alt="图8 墙建立完成示意图"></p>
 <h2 id="3-Appearance"><a href="#3-Appearance" class="headerlink" title="3 Appearance"></a>3 Appearance</h2><blockquote>
 <p>本节主要内容：</p>
@@ -375,7 +375,7 @@
 <li>点击Menu / File / Save World As …，将模拟环境另存为appearance.wb。</li>
 </ol>
 </blockquote>
-<h3 id="3-2-灯光"><a href="#3-2-灯光" class="headerlink" title="3.2 灯光"></a>3.2 灯光</h3><p>　　环境的光由<strong>Light</strong>结点和背景决定。<strong>Light</strong>结点有三种类型：</p>
+<h3 id="3-2-灯光"><a href="#3-2-灯光" class="headerlink" title="3.2 灯光"></a>3.2 灯光</h3><p>环境的光由<strong>Light</strong>结点和背景决定。<strong>Light</strong>结点有三种类型：</p>
 <ol>
 <li><strong>DirectionalLight</strong>（方向光）结点：用于模拟无限远的光，如：太阳光。</li>
 <li><strong>PointLight</strong>（点光）结点：用于模拟从单个点发散出的光，如：灯泡。</li>
@@ -383,9 +383,9 @@
 </ol>
 <p>三种灯光结点的比较如图所示：</p>
 <p><img src="/2022/01/05/Webots%E8%87%AA%E5%AD%A6%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/%E4%B8%89%E7%A7%8D%E7%81%AF%E5%85%89%E7%9A%84%E6%AF%94%E8%BE%83%E7%A4%BA%E6%84%8F%E5%9B%BE.png" srcset="/img/loading.gif" lazyload alt="图9 三种灯光的比较示意图，依次为DirectionLight、PointLight、SpotLight"></p>
-<p>　　灯光所需的性能开销是比较大的，并且会降低模拟的速度，尤其是当需要投射阴影时。降低灯光的个数会提高<strong>渲染</strong>（render）的速度。三种灯光结点的渲染效率为：DirectionalLight &gt; PointLight &gt; SpotLight。</p>
-<p>　　本模拟环境中，灯光结点在场景树中是不可见的，这是因为DirectionLight被包含在<strong>TexturedBackgroundLight</strong>结点中。</p>
-<h3 id="3-3-修改墙的外表"><a href="#3-3-修改墙的外表" class="headerlink" title="3.3 修改墙的外表"></a>3.3 修改墙的外表</h3><p>　　Shape结点中的<strong>Appearance</strong>结点和<strong>PBRAppearance</strong>结点用于控制物体的颜色和纹理。 使用PBRAppearance结点能更好的获得渲染结果。</p>
+<p>灯光所需的性能开销是比较大的，并且会降低模拟的速度，尤其是当需要投射阴影时。降低灯光的个数会提高<strong>渲染</strong>（render）的速度。三种灯光结点的渲染效率为：DirectionalLight &gt; PointLight &gt; SpotLight。</p>
+<p>本模拟环境中，灯光结点在场景树中是不可见的，这是因为DirectionLight被包含在<strong>TexturedBackgroundLight</strong>结点中。</p>
+<h3 id="3-3-修改墙的外表"><a href="#3-3-修改墙的外表" class="headerlink" title="3.3 修改墙的外表"></a>3.3 修改墙的外表</h3><p>Shape结点中的<strong>Appearance</strong>结点和<strong>PBRAppearance</strong>结点用于控制物体的颜色和纹理。 使用PBRAppearance结点能更好的获得渲染结果。</p>
 <blockquote>
 <p>&lt;动手 #5&gt;：<sup>【注】：翻译自Webots / User Guide / Tutorial / Tutorials 3 / Modify the Appearance of the Walls / Hands-on #2。</sup></p>
 <ol>
@@ -407,15 +407,15 @@
 </ol>
 </blockquote>
 <p><img src="/2022/01/05/Webots%E8%87%AA%E5%AD%A6%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/Webots%E6%8F%90%E4%BE%9B%E7%9A%84%E7%BA%B9%E7%90%86%E5%9B%BE%E7%89%87.png" srcset="/img/loading.gif" lazyload alt="图11 Webots提供的纹理图片"></p>
-<p>　　Webots通过<strong>UV mapping</strong>（UV映射）函数将二维图像表示映射到三维模型上。纹理添加完成的结果如图所示。</p>
+<p>Webots通过<strong>UV mapping</strong>（UV映射）函数将二维图像表示映射到三维模型上。纹理添加完成的结果如图所示。</p>
 <p><img src="/2022/01/05/Webots%E8%87%AA%E5%AD%A6%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/%E7%90%83%E6%B7%BB%E5%8A%A0%E7%BA%B9%E7%90%86%E5%AE%8C%E6%88%90%E7%A4%BA%E6%84%8F%E5%9B%BE.png" srcset="/img/loading.gif" lazyload alt="图12 球添加纹理完成示意图"></p>
-<h3 id="3-5-不同的渲染模式"><a href="#3-5-不同的渲染模式" class="headerlink" title="3.5 不同的渲染模式"></a>3.5 不同的渲染模式</h3><p>　　两种渲染模式：</p>
+<h3 id="3-5-不同的渲染模式"><a href="#3-5-不同的渲染模式" class="headerlink" title="3.5 不同的渲染模式"></a>3.5 不同的渲染模式</h3><p>两种渲染模式：</p>
 <ul>
 <li>线框渲染：打开方式为点击Menu / View / Wireframe Rendering。渲染结过如图所示。</li>
 <li>普通渲染：打开方式为点击Menu / View / Plain Rendering。</li>
 </ul>
 <p><img src="/2022/01/05/Webots%E8%87%AA%E5%AD%A6%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/%E7%BA%BF%E6%A1%86%E6%B8%B2%E6%9F%93%E7%A4%BA%E6%84%8F%E5%9B%BE.png" srcset="/img/loading.gif" lazyload alt="图13 线框渲染示意图"></p>
-<p>　　常用的其他渲染选项：</p>
+<p>常用的其他渲染选项：</p>
 <ul>
 <li>显示坐标系：打开方式为点击Menu / View / Optional Rendering / Show Coordinates System。</li>
 <li>显示距离传感器：打开方式为点击Menu / View / Optional Rendering / Show DistanceSensor Rays。</li>
@@ -480,8 +480,8 @@
 <li>讲述了rotation字段。</li>
 </ol>
 </blockquote>
-<h3 id="5-1-复合实体（Conpound-Solid）"><a href="#5-1-复合实体（Conpound-Solid）" class="headerlink" title="5.1 复合实体（Conpound Solid）"></a>5.1 复合实体（Conpound Solid）</h3><p>　　在上面小节中我们所构造的实体，无论是球还是墙，都是只有<strong>一个</strong>几何体（或者是球体、或者是长方体），然而，现实中我们需要构造更复杂的实体（可能需要多个几何体来构成），比如：哑铃，它是由一个圆柱和两个球体构成的。这时，就需要引入<strong>复合实体Conpound Solid</strong>，利用<strong>Group</strong>结点来构建复杂模型，如图15所示，将三个几何体结点都放入Group结点的children字段里。</p>
-<p>　　为了让哑铃片（Shape结点）可以相对哑铃（Solid结点）移动、旋转，故将哑铃片（Shape结点）放置在Transform结点中。哑铃杆（Shape结点）没有必要可以相对哑铃运动，故没有将哑铃杆（Shape结点）放置在Transform结点中。Transform结点的translation字段显示的不是绝对坐标系而是相对（相对于整个实体）坐标系。</p>
+<h3 id="5-1-复合实体（Conpound-Solid）"><a href="#5-1-复合实体（Conpound-Solid）" class="headerlink" title="5.1 复合实体（Conpound Solid）"></a>5.1 复合实体（Conpound Solid）</h3><p>在上面小节中我们所构造的实体，无论是球还是墙，都是只有<strong>一个</strong>几何体（或者是球体、或者是长方体），然而，现实中我们需要构造更复杂的实体（可能需要多个几何体来构成），比如：哑铃，它是由一个圆柱和两个球体构成的。这时，就需要引入<strong>复合实体Conpound Solid</strong>，利用<strong>Group</strong>结点来构建复杂模型，如图15所示，将三个几何体结点都放入Group结点的children字段里。</p>
+<p>为了让哑铃片（Shape结点）可以相对哑铃（Solid结点）移动、旋转，故将哑铃片（Shape结点）放置在Transform结点中。哑铃杆（Shape结点）没有必要可以相对哑铃运动，故没有将哑铃杆（Shape结点）放置在Transform结点中。Transform结点的translation字段显示的不是绝对坐标系而是相对（相对于整个实体）坐标系。</p>
 <blockquote>
 <p>&lt;动手 #8&gt;：<sup>【注】：翻译自Webots / User Guide / Tutorial / Tutorials 5 / Hands-on #1~2。</sup></p>
 <ol>
@@ -493,13 +493,13 @@
 </blockquote>
 <p><img src="/2022/01/05/Webots%E8%87%AA%E5%AD%A6%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/%E5%93%91%E9%93%83%E5%AE%9E%E4%BD%93%E7%9A%84%E7%BB%93%E6%9E%84%E5%9B%BE.png" srcset="/img/loading.gif" lazyload alt="图15 哑铃实体的结构图。由多个几何体子结点所构成"></p>
 <p><img src="/2022/01/05/Webots%E8%87%AA%E5%AD%A6%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/%E5%93%91%E9%93%83%E6%9E%84%E9%80%A0%E5%AE%8C%E6%88%90%E7%A4%BA%E6%84%8F%E5%9B%BE.png" srcset="/img/loading.gif" lazyload alt="图16 哑铃构造完成示意图"></p>
-<h3 id="5-2-物理属性"><a href="#5-2-物理属性" class="headerlink" title="5.2 物理属性"></a>5.2 物理属性</h3><p>　　本小节主要讲述了实体结点的一些简单的物理属性，这些物理属性都是在Physics结点（添加在Solid/physics字段）中调节的。</p>
-<p>　　其中，主要是设置实体的质量，有两种方法：一是指定质量mass字段，二是指定密度density字段。当指定mass字段时，它定义固体的总质量（单位[kg]）；当指定density字段时，其值（单位[kg/m3]）乘以实体的体积，即为实体的总质量。1000[kg/m³]的密度对应于水的密度（默认值）。两种方法只能二选一（另一个字段在不使用时应当设置为-1）。</p>
-<p>　　另外，关于质心，默认情况下，实体节点的质心设置在其原点（原点由实体的translation字段定义）。也可以通过Physics结点中的centerOfMass字段修改，其值是相对于原点指定的。</p>
-<h3 id="5-3-旋转字段（The-Rotation-Field）"><a href="#5-3-旋转字段（The-Rotation-Field）" class="headerlink" title="5.3 旋转字段（The Rotation Field）"></a>5.3 旋转字段（The Rotation Field）</h3><p>　　rotation字段用于控制Transform结点的旋转。它有四个分量构成，前三个分量是定义旋转轴的单位向量，第四个分量定义了绕轴的旋转角度（单位为弧度<strong>rad</strong>，注意：1° = π/180 rad）。</p>
+<h3 id="5-2-物理属性"><a href="#5-2-物理属性" class="headerlink" title="5.2 物理属性"></a>5.2 物理属性</h3><p>本小节主要讲述了实体结点的一些简单的物理属性，这些物理属性都是在Physics结点（添加在Solid/physics字段）中调节的。</p>
+<p>其中，主要是设置实体的质量，有两种方法：一是指定质量mass字段，二是指定密度density字段。当指定mass字段时，它定义固体的总质量（单位[kg]）；当指定density字段时，其值（单位[kg/m3]）乘以实体的体积，即为实体的总质量。1000[kg/m³]的密度对应于水的密度（默认值）。两种方法只能二选一（另一个字段在不使用时应当设置为-1）。</p>
+<p>另外，关于质心，默认情况下，实体节点的质心设置在其原点（原点由实体的translation字段定义）。也可以通过Physics结点中的centerOfMass字段修改，其值是相对于原点指定的。</p>
+<h3 id="5-3-旋转字段（The-Rotation-Field）"><a href="#5-3-旋转字段（The-Rotation-Field）" class="headerlink" title="5.3 旋转字段（The Rotation Field）"></a>5.3 旋转字段（The Rotation Field）</h3><p>rotation字段用于控制Transform结点的旋转。它有四个分量构成，前三个分量是定义旋转轴的单位向量，第四个分量定义了绕轴的旋转角度（单位为弧度<strong>rad</strong>，注意：1° = π/180 rad）。</p>
 <p><img src="/2022/01/05/Webots%E8%87%AA%E5%AD%A6%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/rotation%E5%AD%97%E6%AE%B5%E7%9A%84%E7%BB%84%E6%88%90%E7%A4%BA%E6%84%8F%E5%9B%BE.png" srcset="/img/loading.gif" lazyload alt="图17 rotation字段的组成示意图"></p>
-<h3 id="5-4-边界对象"><a href="#5-4-边界对象" class="headerlink" title="5.4 边界对象"></a>5.4 边界对象</h3><p>　　本小节主要讲述了实体的边界几何形状，边界对象基本体种类如图18所示。边界对象的数量和基本体种类影响模拟的速度，模拟效率排序为：Sphere &gt; Box &gt; Capsule（胶囊） &gt; Cylinder（圆柱体） &gt;&gt; IndexedFaceSet，因此，尽量不要使用IndexedFaceSet。</p>
-<p>　　对于地面来说，可以用Plane结点或者ElevationGrid结点构建。其中，Plane结点的模拟效率要高于ElevationGrid，但是Plane结点只能用来描述平面。</p>
+<h3 id="5-4-边界对象"><a href="#5-4-边界对象" class="headerlink" title="5.4 边界对象"></a>5.4 边界对象</h3><p>本小节主要讲述了实体的边界几何形状，边界对象基本体种类如图18所示。边界对象的数量和基本体种类影响模拟的速度，模拟效率排序为：Sphere &gt; Box &gt; Capsule（胶囊） &gt; Cylinder（圆柱体） &gt;&gt; IndexedFaceSet，因此，尽量不要使用IndexedFaceSet。</p>
+<p>对于地面来说，可以用Plane结点或者ElevationGrid结点构建。其中，Plane结点的模拟效率要高于ElevationGrid，但是Plane结点只能用来描述平面。</p>
 <p><img src="/2022/01/05/Webots%E8%87%AA%E5%AD%A6%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/%E5%87%A0%E4%BD%95%E7%BB%93%E7%82%B9%E7%A7%8D%E7%B1%BB%E5%9F%BA%E6%9C%AC%E4%BD%93%E7%A4%BA%E6%84%8F%E5%9B%BE.png" srcset="/img/loading.gif" lazyload alt="图18 几何结点基本体种类示意图"></p>
 <h2 id="6-4-Wheels-Robot"><a href="#6-4-Wheels-Robot" class="headerlink" title="6 4-Wheels Robot"></a>6 4-Wheels Robot</h2><h2 id="7-My-First-PROTO"><a href="#7-My-First-PROTO" class="headerlink" title="7 My First PROTO"></a>7 My First PROTO</h2><h2 id="8-Using-ROS"><a href="#8-Using-ROS" class="headerlink" title="8 Using ROS"></a>8 Using ROS</h2><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol>
 <li>Webots的用户指导.</li>
