@@ -4,6 +4,27 @@
   
   
   <entry>
+    <title>ubuntu创建快捷方式</title>
+    <link href="/2022/06/13/ubuntu%E5%88%9B%E5%BB%BA%E5%BF%AB%E6%8D%B7%E6%96%B9%E5%BC%8F/"/>
+    <url>/2022/06/13/ubuntu%E5%88%9B%E5%BB%BA%E5%BF%AB%E6%8D%B7%E6%96%B9%E5%BC%8F/</url>
+    
+    <content type="html"><![CDATA[<h1 id="Creating-Shortcuts-Under-Ubuntu"><a href="#Creating-Shortcuts-Under-Ubuntu" class="headerlink" title="Creating Shortcuts Under Ubuntu"></a>Creating Shortcuts Under Ubuntu</h1><blockquote><p>Author: HuXiaoming<br>Date: 2022-06-13</p></blockquote><h2 id="What-Is-It-amp-amp-Why"><a href="#What-Is-It-amp-amp-Why" class="headerlink" title="What Is It &amp;&amp; Why?"></a>What Is It &amp;&amp; Why?</h2><p>I used to install software with <code>.deb</code> file under Ubuntu, which can create a shortcut automatically. However, sometimes we have to use other ways to install software, (e.g., downloading the compressed package of the software.) and it don’t create a shortcut automatically. So we have to create a shortcut manually if we don’t want to open the software in a troublesome way.</p><h2 id="How-To-Create-A-Shortcut"><a href="#How-To-Create-A-Shortcut" class="headerlink" title="How To Create A Shortcut?"></a>How To Create A Shortcut?</h2><h3 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h3><blockquote><p>We download the software of webots and create a shortcut for it as an example.</p></blockquote><h4 id="Download-amp-amp-Extract"><a href="#Download-amp-amp-Extract" class="headerlink" title="Download &amp;&amp; Extract"></a>Download &amp;&amp; Extract</h4><p>We go to the  <a href="https://github.com/cyberbotics/webots/releases/tag/R2022a">link</a> to download the compressed package <code>webots-R2022a-x86-64_ubuntu-18.04.tar.bz2</code> of webots software, and then extract it in your <code>home</code> folder.</p><h4 id="Run"><a href="#Run" class="headerlink" title="Run"></a>Run</h4><p>We open the <code>webots</code> folder in terminal, and run this command <code>./webots</code> to test whether we can open webots software in terminal.</p><h4 id="Create-A-Shortcut"><a href="#Create-A-Shortcut" class="headerlink" title="Create A Shortcut"></a>Create A Shortcut</h4><p>We open a new terminal, and run this command <code>cd /usr/share/applications</code>. In the <code>applications</code> folder, you will find a lot of <code>.desktop</code> files for your installed software. Than, we should run <code>vim webots.desktop</code> and type the following: </p><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-section">[Desktop Entry]</span><br><span class="hljs-attr">Name</span>=webots<br><span class="hljs-attr">Comment</span>=webots IDE<br><span class="hljs-attr">Exec</span>=/home/hu/webots/webots<br><span class="hljs-attr">Icon</span>=/home/hu/webots/resources/icons/core/webots.png<br><span class="hljs-attr">Terminal</span>=<span class="hljs-literal">false</span><br><span class="hljs-attr">Type</span>=Application<br><span class="hljs-attr">StartupNotify</span>=<span class="hljs-literal">true</span><br><span class="hljs-attr">Categories</span>=Application<span class="hljs-comment">;Development;</span><br></code></pre></td></tr></table></figure><p><code>Exec</code> is the path of your executable file (the file is a executable file in the command <code>./webots</code> in the subtitle <strong>Run</strong>).</p><p><code>Tcon</code> is the path of the icons for your software.</p><h4 id="Success"><a href="#Success" class="headerlink" title="Success"></a>Success</h4><p>After that, you will find the shortcut of webots in your <code>show application</code> (bottom left corner of screen).</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>webots</tag>
+      
+      <tag>ubuntu</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>PyCharm中Python Interprets的配置</title>
     <link href="/2022/04/12/PyCharm%E4%B8%ADPython-Interprets%E7%9A%84%E9%85%8D%E7%BD%AE/"/>
     <url>/2022/04/12/PyCharm%E4%B8%ADPython-Interprets%E7%9A%84%E9%85%8D%E7%BD%AE/</url>

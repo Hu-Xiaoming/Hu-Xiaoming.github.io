@@ -18,7 +18,7 @@
   <meta name="author" content="胡小明">
   <meta name="keywords" content="">
   
-  <title>PyCharm中Python Interprets的配置 - 恒心居</title>
+  <title>ubuntu创建快捷方式 - 恒心居</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -206,7 +206,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.1)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="PyCharm中Python Interprets的配置">
+            <span class="h2" id="subtitle" title="ubuntu创建快捷方式">
               
             </span>
 
@@ -216,8 +216,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2022-04-12 01:05" pubdate>
-        2022年4月12日 凌晨
+      <time datetime="2022-06-13 19:17" pubdate>
+        2022年6月13日 晚上
       </time>
     </span>
   
@@ -228,7 +228,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1k 字
+      271 字
     </span>
   
 
@@ -238,7 +238,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      11
+      5
        分钟
     </span>
   
@@ -276,79 +276,25 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">PyCharm中Python Interprets的配置</h1>
+            <h1 style="display: none">ubuntu创建快捷方式</h1>
             
             <div class="markdown-body">
-              <h1 id="PyCharm中Python-Interprets的配置"><a href="#PyCharm中Python-Interprets的配置" class="headerlink" title="PyCharm中Python Interprets的配置"></a>PyCharm中Python Interprets的配置</h1><div class="note note-info">
-            <p>本文<strong>转载</strong>自CSDN，原文标题为：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_41498261/article/details/109112331">详细了解PyCharm支持的4种Python Interpreter和配置方法</a></p>
-          </div>
+              <h1 id="Creating-Shortcuts-Under-Ubuntu"><a href="#Creating-Shortcuts-Under-Ubuntu" class="headerlink" title="Creating Shortcuts Under Ubuntu"></a>Creating Shortcuts Under Ubuntu</h1><blockquote>
+<p>Author: HuXiaoming<br>Date: 2022-06-13</p>
+</blockquote>
+<h2 id="What-Is-It-amp-amp-Why"><a href="#What-Is-It-amp-amp-Why" class="headerlink" title="What Is It &amp;&amp; Why?"></a>What Is It &amp;&amp; Why?</h2><p>I used to install software with <code>.deb</code> file under Ubuntu, which can create a shortcut automatically. However, sometimes we have to use other ways to install software, (e.g., downloading the compressed package of the software.) and it don’t create a shortcut automatically. So we have to create a shortcut manually if we don’t want to open the software in a troublesome way.</p>
+<h2 id="How-To-Create-A-Shortcut"><a href="#How-To-Create-A-Shortcut" class="headerlink" title="How To Create A Shortcut?"></a>How To Create A Shortcut?</h2><h3 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h3><blockquote>
+<p>We download the software of webots and create a shortcut for it as an example.</p>
+</blockquote>
+<h4 id="Download-amp-amp-Extract"><a href="#Download-amp-amp-Extract" class="headerlink" title="Download &amp;&amp; Extract"></a>Download &amp;&amp; Extract</h4><p>We go to the  <a target="_blank" rel="noopener" href="https://github.com/cyberbotics/webots/releases/tag/R2022a">link</a> to download the compressed package <code>webots-R2022a-x86-64_ubuntu-18.04.tar.bz2</code> of webots software, and then extract it in your <code>home</code> folder.</p>
+<h4 id="Run"><a href="#Run" class="headerlink" title="Run"></a>Run</h4><p>We open the <code>webots</code> folder in terminal, and run this command <code>./webots</code> to test whether we can open webots software in terminal.</p>
+<h4 id="Create-A-Shortcut"><a href="#Create-A-Shortcut" class="headerlink" title="Create A Shortcut"></a>Create A Shortcut</h4><p>We open a new terminal, and run this command <code>cd /usr/share/applications</code>. In the <code>applications</code> folder, you will find a lot of <code>.desktop</code> files for your installed software. Than, we should run <code>vim webots.desktop</code> and type the following: </p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-section">[Desktop Entry]</span><br><span class="hljs-attr">Name</span>=webots<br><span class="hljs-attr">Comment</span>=webots IDE<br><span class="hljs-attr">Exec</span>=/home/hu/webots/webots<br><span class="hljs-attr">Icon</span>=/home/hu/webots/resources/icons/core/webots.png<br><span class="hljs-attr">Terminal</span>=<span class="hljs-literal">false</span><br><span class="hljs-attr">Type</span>=Application<br><span class="hljs-attr">StartupNotify</span>=<span class="hljs-literal">true</span><br><span class="hljs-attr">Categories</span>=Application<span class="hljs-comment">;Development;</span><br></code></pre></td></tr></table></figure>
 
-<h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>初次使用Pycharm的时候，可能会对于解释器的配置有些疑问，因为PyCharm支持以下4种Python Interpreter:</p>
-<ul>
-<li>Virtualenv Environment</li>
-<li>Conda Environment</li>
-<li>System Interpreter</li>
-<li>Pipenv Environment</li>
-</ul>
-<h2 id="1-Virtualenv-Environment"><a href="#1-Virtualenv-Environment" class="headerlink" title="1 Virtualenv Environment"></a>1 Virtualenv Environment</h2><h3 id="1-1-Virtualenv-Environment是什么？"><a href="#1-1-Virtualenv-Environment是什么？" class="headerlink" title="1.1 Virtualenv Environment是什么？"></a>1.1 Virtualenv Environment是什么？</h3><p>Python的虚拟环境可以使一个Python程序拥有独立的库(<strong>library</strong>)和解释器(<strong>interpreter</strong>)，而不用与其他Python程序共享同一个library和interpreter。虚拟环境的好处是避免了不同Python程序间的互相影响（共同使用全局的(<strong>global</strong>) library 和 interpreter），例如程序A需要某个库的1.0版本，而程序B需要同样这个库的2.0版本，如果程序B执行，则A就不能执行了。</p>
-<blockquote>
-<p>virtualenv，是一款Python工具，用以创建独立的Python虚拟环境。在一个Python虚拟环境中，持有Python所必须的依赖库，形成Python的虚拟运行空间。</p>
-</blockquote>
-<p>Pycharm中集成了Virtual Environment工具，用以创建独立的虚拟环境。</p>
-<p>Virtual Environment主要解决的库依赖和版本依赖、以及间接授权等问题。</p>
-<h3 id="1-2-如何使用Virtualenv-Environment？"><a href="#1-2-如何使用Virtualenv-Environment？" class="headerlink" title="1.2 如何使用Virtualenv Environment？"></a>1.2 如何使用Virtualenv Environment？</h3><p>打开Pycharm的Virtualenv Environment配置界面，发现存在两种配置方式：</p>
-<p><img src="/2022/04/12/PyCharm%E4%B8%ADPython-Interprets%E7%9A%84%E9%85%8D%E7%BD%AE/Virtualenv_Environment%E9%85%8D%E7%BD%AE%E7%95%8C%E9%9D%A2.png" srcset="/img/loading.gif" lazyload alt="图1 Virtualenv Environment配置界面"></p>
-<h4 id="1-2-1-New-environment"><a href="#1-2-1-New-environment" class="headerlink" title="1.2.1 New environment"></a>1.2.1 New environment</h4><p><img src="/2022/04/12/PyCharm%E4%B8%ADPython-Interprets%E7%9A%84%E9%85%8D%E7%BD%AE/new_environment%E6%96%B9%E5%BC%8F%E9%85%8D%E7%BD%AE%E7%A4%BA%E6%84%8F%E5%9B%BE.png" srcset="/img/loading.gif" lazyload alt="图2 new environment方式配置示意图"></p>
-<p>需要配置的项：</p>
-<ul>
-<li><p>Location：指定创建虚拟环境的目录。</p>
-<blockquote>
-<p>一般创建虚拟环境都是一个项目可能创建一个虚拟环境，所以最好将环境创建在你运行的项目的根目录下。</p>
-</blockquote>
-<p><code>图2</code>中，我运行的项目是<code>F:\WorkPlace\pyhanlp</code>。所以目录选择在<code>F:\WorkPlace\pyhanlp\venv</code>。</p>
-</li>
-</ul>
-<ul>
-<li><p>Base interpreter：指定电脑上存在的Python编译器的目录。</p>
-<blockquote>
-<p>可以是你安装的Python，也可以是你使用anaconda创建的虚拟Pyhon。</p>
-</blockquote>
-<p>未完待续（缺少使用conda创建虚拟环境的内容）…</p>
-</li>
-<li><p>□ Inherit(继承) global site-packages：勾选该选项后则可以使用Base interpreter中配置的python环境所安装的所有组件；不选将和外界完全隔离,不加载Base interpreter中配置的python环境下的包，即完全是一个干净的环境，需要自己重装安装所需的包（重新安装所有包）。</p>
-</li>
-<li><p>□ Make available to all projects：表示可将此虚拟环境提供给所有项目使用。</p>
-</li>
-</ul>
-<p>配置完成后，点击<code>OK</code>，会发现在<code>F:\WorkPlace\pyhanlp</code>目录下生成了一个<code>venv</code>文件夹。</p>
-<h4 id="1-2-2-Existing-environment"><a href="#1-2-2-Existing-environment" class="headerlink" title="1.2.2 Existing environment"></a>1.2.2 Existing environment</h4><p><code>Existing environment</code>中只需要配置一项任务:<code>Interpreter</code>。这个就是指定你的电脑中已经存在的一项虚拟环境目录。</p>
-<p>已经存在的虚拟环境目录可以是：</p>
-<ol>
-<li>自己通过控制台建立的一个新的虚拟环境目录。</li>
-<li>自己以前通过<code>New environment</code>创建的虚拟环境的目录。</li>
-</ol>
-<h2 id="2-Conda-Environment"><a href="#2-Conda-Environment" class="headerlink" title="2 Conda Environment"></a>2 Conda Environment</h2><h3 id="2-1-Conda-Environment是什么？"><a href="#2-1-Conda-Environment是什么？" class="headerlink" title="2.1 Conda Environment是什么？"></a>2.1 Conda Environment是什么？</h3><p><code>Conda Environment</code>就是使用Anaconda中带有的Python解释器。</p>
-<p>安装Anaconda软件，Anaconda会自带很多的包，其中包括Python解释器。因此如果电脑中安装了Anaconda软件，也可以使用Anaconda里面附带安装的Python解释器或者通过Anaconda创建的虚拟Python解释器。和上面的操作类似。</p>
-<h3 id="2-2-如何配置-Conda-Environment？"><a href="#2-2-如何配置-Conda-Environment？" class="headerlink" title="2.2 如何配置 Conda Environment？"></a>2.2 如何配置 Conda Environment？</h3><p>打开Pycharm的Conda Environment配置界面，发现存在两种配置方式：</p>
-<p><img src="/2022/04/12/PyCharm%E4%B8%ADPython-Interprets%E7%9A%84%E9%85%8D%E7%BD%AE/Conda_Environment%E9%85%8D%E7%BD%AE%E7%95%8C%E9%9D%A2.png" srcset="/img/loading.gif" lazyload alt="图3 Conda Environment配置界面"></p>
-<p>【注】<code>图3</code>左下角提示<code>Conda executable path is empty</code>是因为我没安装Conda。</p>
-<h4 id="2-2-1-New-environment"><a href="#2-2-1-New-environment" class="headerlink" title="2.2.1 New environment"></a>2.2.1 New environment</h4><p>使用Anaconda创建一个新的虚拟Python环境。Anaconda会帮我们下载所指定的Python版本。</p>
-<p><img src="/2022/04/12/PyCharm%E4%B8%ADPython-Interprets%E7%9A%84%E9%85%8D%E7%BD%AE/new_environment%E6%96%B9%E5%BC%8F%E9%85%8D%E7%BD%AE%E7%A4%BA%E6%84%8F%E5%9B%BE(conda).png" srcset="/img/loading.gif" lazyload alt="图4 new environment方式配置示意图"></p>
-<p>需要配置的项：</p>
-<ul>
-<li><p>Location：指定通过Anaconda创建虚拟环境的目录。</p>
-<blockquote>
-<p>Anaconda创建的虚拟环境一般在Anaconda安装目录下的envs目录下。</p>
-</blockquote>
-</li>
-<li><p>Python version：安装python版本号。</p>
-</li>
-<li><p>Conda executable：安装的Anaconda执行器的文件路径。</p>
-</li>
-<li><p>□ Make available to all projects：勾选后，表示可将此虚拟环境提供给所有项目使用。</p>
-</li>
-</ul>
-<h4 id="2-2-2-Existing-environment"><a href="#2-2-2-Existing-environment" class="headerlink" title="2.2.2 Existing environment"></a>2.2.2 Existing environment</h4><h2 id="3-System-Interpreter"><a href="#3-System-Interpreter" class="headerlink" title="3 System Interpreter"></a>3 System Interpreter</h2><h3 id="3-1-如何配置系统Python解释器？"><a href="#3-1-如何配置系统Python解释器？" class="headerlink" title="3.1 如何配置系统Python解释器？"></a>3.1 如何配置系统Python解释器？</h3><h2 id="4-Pipenv-Environment"><a href="#4-Pipenv-Environment" class="headerlink" title="4 Pipenv Environment"></a>4 Pipenv Environment</h2><h3 id="4-1-Pipenv是什么？"><a href="#4-1-Pipenv是什么？" class="headerlink" title="4.1 Pipenv是什么？"></a>4.1 Pipenv是什么？</h3><h3 id="4-2-如何配置-Pipenv-Environment？"><a href="#4-2-如何配置-Pipenv-Environment？" class="headerlink" title="4.2 如何配置 Pipenv Environment？"></a>4.2 如何配置 Pipenv Environment？</h3><h4 id="4-2-1-准备步骤"><a href="#4-2-1-准备步骤" class="headerlink" title="4.2.1 准备步骤"></a>4.2.1 准备步骤</h4><h4 id="4-2-2-为新的Python项目设置pipenv"><a href="#4-2-2-为新的Python项目设置pipenv" class="headerlink" title="4.2.2 为新的Python项目设置pipenv"></a>4.2.2 为新的Python项目设置pipenv</h4><h4 id="4-2-3-为现有的Python项目配置pipenv"><a href="#4-2-3-为现有的Python项目配置pipenv" class="headerlink" title="4.2.3 为现有的Python项目配置pipenv"></a>4.2.3 为现有的Python项目配置pipenv</h4>
+<p><code>Exec</code> is the path of your executable file (the file is a executable file in the command <code>./webots</code> in the subtitle <strong>Run</strong>).</p>
+<p><code>Tcon</code> is the path of the icons for your software.</p>
+<h4 id="Success"><a href="#Success" class="headerlink" title="Success"></a>Success</h4><p>After that, you will find the shortcut of webots in your <code>show application</code> (bottom left corner of screen).</p>
+
             </div>
             <hr>
             <div>
@@ -358,11 +304,9 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/Python/">Python</a>
+                      <a class="hover-with-bg" href="/tags/webots/">webots</a>
                     
-                      <a class="hover-with-bg" href="/tags/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/">软件使用</a>
-                    
-                      <a class="hover-with-bg" href="/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">环境配置</a>
+                      <a class="hover-with-bg" href="/tags/ubuntu/">ubuntu</a>
                     
                   </div>
                 
@@ -379,18 +323,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/06/13/ubuntu%E5%88%9B%E5%BB%BA%E5%BF%AB%E6%8D%B7%E6%96%B9%E5%BC%8F/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">ubuntu创建快捷方式</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/02/21/%E9%9A%8F%E7%AC%941/">
-                        <span class="hidden-mobile">随笔1</span>
+                      <a href="/2022/04/12/PyCharm%E4%B8%ADPython-Interprets%E7%9A%84%E9%85%8D%E7%BD%AE/">
+                        <span class="hidden-mobile">PyCharm中Python Interprets的配置</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
